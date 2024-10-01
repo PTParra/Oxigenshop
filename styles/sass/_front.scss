@@ -32,4 +32,66 @@
             object-fit: cover;
         }
     }
+
+    &__popularity{
+        &__title{
+            font-weight: 300;
+            font-size: 1.9em;
+            width: 75%;
+            text-align: center;
+            margin: 0 auto .8em auto;
+        }
+        
+        &__numbers{
+
+            &__number{
+                text-align: center;
+                width: 180px;
+                margin: 0 auto 2em auto;
+                &__icon{
+                    position: relative;
+                    width: 65px;
+                    height: 65px;
+                    margin: 0 auto .8em auto;
+                    &__circle{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+
+                    &__image{
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        margin: auto 0;
+                    }
+
+                    &__image--person{
+                        left: 53%;
+                    }
+
+                    &__image--eye{
+                        left: 32%;
+                    }
+
+                    &__image--posts{
+                        left: 50%;
+                    }
+                }
+                &__title{
+                    font-size: 1.3em;
+                    font-weight: 800;
+                    letter-spacing: .25em;
+                    margin-bottom: .8em;
+                }
+
+                &__subtitle{
+                    color: #A5A5A5;
+                    font-weight: 400;
+                    width: 80%;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
 }
