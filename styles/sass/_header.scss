@@ -14,9 +14,11 @@
         margin: auto;
         &__title{
             font-size: 2em;
-            font-family: "Poppins", system-ui;
             font-weight: 300;
             color: #08A6E4;
+            position: absolute;
+            left: 0;
+            top: 15%;
         }
         & > *{
             display: inline-block;
