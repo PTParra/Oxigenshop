@@ -1,0 +1,115 @@
+.contact{
+    padding-bottom: 2.9em;
+    &__info{
+        width: 85%;
+        margin: 0 auto;
+        &__title{
+            font-size: 2.5em;
+            font-weight: 400;
+            margin-bottom: .1em;
+        }
+
+        &__subtitle{
+            font-weight: 400;
+            margin-bottom: 2em;
+        }
+
+        &__types{
+            margin-bottom: 3.3em;
+            &__type{
+                margin-bottom: .9em;
+                & *{
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+
+                &__description-img{
+                    margin-right: .4em;
+                }
+
+                &__contact{
+                    color: #A5A5A5;
+                    
+                }
+            }
+        }
+    }
+
+
+
+
+    &__form{
+        width: 85%;
+        margin: 0 auto;
+
+        &__text-input{
+            border: none;
+            border-bottom: 1px solid #95989A;
+            width: 100%;
+            display: block;
+            margin-bottom: 2.5em;
+        }
+
+        &__consent{
+            position: relative;
+            display: block;
+            width: 100%;
+            margin-bottom: 1em;
+            &__label{
+                font-size: .75em;
+                font-weight: 400;
+                color: #707070;
+                width: 90%;
+                margin-left: auto;
+                display: block;
+            }
+            
+            &__checkbox{
+                display: none;
+            }
+
+            &__custom-checkbox{
+                display: inline-block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 24px;
+                height: 24px;
+                border: 1px solid #95989A;
+                border-radius: 4px;
+            }
+
+            &__checkbox:checked + &__custom-checkbox::before{
+                content: '✓';
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+                color: #08A6E4;
+            }
+        }
+
+        &__label--uppercase{
+            font-size: .7em;
+            font-weight: 600;
+            color: #08A6E4;
+            text-transform: uppercase;
+            letter-spacing: .2em;
+            display: block;
+            margin-bottom: .6em;
+        }
+
+        &__submit-button{
+            margin-left: auto;
+            display: block;
+            padding: 1.3em 7em;
+            background-color: #08A6E4;
+            color: white;
+            border: none;
+            border-radius: 35px;
+            font-size: .812em;
+            filter: drop-shadow(5px 10px 14px #07ACE64A);
+        }
+    }
+
+    
+}

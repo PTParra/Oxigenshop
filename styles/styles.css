@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 * {
@@ -337,4 +338,102 @@ p, a, label, button {
 }
 .pricing__price--premium .pricing__price__type .pricing__price__type__price {
   color: #55DFB4;
+}
+
+.contact {
+  padding-bottom: 2.9em;
+}
+.contact__info {
+  width: 85%;
+  margin: 0 auto;
+}
+.contact__info__title {
+  font-size: 2.5em;
+  font-weight: 400;
+  margin-bottom: 0.1em;
+}
+.contact__info__subtitle {
+  font-weight: 400;
+  margin-bottom: 2em;
+}
+.contact__info__types {
+  margin-bottom: 3.3em;
+}
+.contact__info__types__type {
+  margin-bottom: 0.9em;
+}
+.contact__info__types__type * {
+  display: inline-block;
+  vertical-align: middle;
+}
+.contact__info__types__type__description-img {
+  margin-right: 0.4em;
+}
+.contact__info__types__type__contact {
+  color: #A5A5A5;
+}
+.contact__form {
+  width: 85%;
+  margin: 0 auto;
+}
+.contact__form__text-input {
+  border: none;
+  border-bottom: 1px solid #95989A;
+  width: 100%;
+  display: block;
+  margin-bottom: 2.5em;
+}
+.contact__form__consent {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-bottom: 1em;
+}
+.contact__form__consent__label {
+  font-size: 0.75em;
+  font-weight: 400;
+  color: #707070;
+  width: 90%;
+  margin-left: auto;
+  display: block;
+}
+.contact__form__consent__checkbox {
+  display: none;
+}
+.contact__form__consent__custom-checkbox {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #95989A;
+  border-radius: 4px;
+}
+.contact__form__consent__checkbox:checked + .contact__form__consent__custom-checkbox::before {
+  content: "✓";
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  color: #08A6E4;
+}
+.contact__form__label--uppercase {
+  font-size: 0.7em;
+  font-weight: 600;
+  color: #08A6E4;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  display: block;
+  margin-bottom: 0.6em;
+}
+.contact__form__submit-button {
+  margin-left: auto;
+  display: block;
+  padding: 1.3em 7em;
+  background-color: #08A6E4;
+  color: white;
+  border: none;
+  border-radius: 35px;
+  font-size: 0.812em;
+  filter: drop-shadow(5px 10px 14px rgba(7, 172, 230, 0.2901960784));
 }/*# sourceMappingURL=styles.css.map */
