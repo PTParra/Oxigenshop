@@ -53,25 +53,31 @@
         }
 
         &__begin{
-            color: white;
-            border-radius: 23px;
-            padding: .8em 3em;
-            text-decoration: none;
-            position: absolute;
-            bottom: -23px;
-            left: 27%;
             
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            right: 0;
+            text-align: center;
+
+            &__button{
+                color: white;
+                border-radius: 23px;
+                padding: .8em 3em;
+                text-decoration: none;
+            }
+            &__button--basic{
+                background-color: $colorBasic;
+            }
+            &__button--professional{
+                background-color: $colorProfesional;
+            }
+            &__button--premium{
+                background-color: $colorPremium;
+            }
         }
 
-        &__begin--basic{
-            background-color: $colorBasic;
-        }
-        &__begin--professional{
-            background-color: $colorProfesional;
-        }
-        &__begin--premium{
-            background-color: $colorPremium;
-        }
+        
     }
 
     &__price--basic{

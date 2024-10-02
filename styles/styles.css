@@ -304,21 +304,25 @@ p, a, label, button {
   font-size: 0.875em;
 }
 .pricing__price__begin {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.pricing__price__begin__button {
   color: white;
   border-radius: 23px;
   padding: 0.8em 3em;
   text-decoration: none;
-  position: absolute;
-  bottom: -23px;
-  left: 27%;
 }
-.pricing__price__begin--basic {
+.pricing__price__begin__button--basic {
   background-color: #EB476E;
 }
-.pricing__price__begin--professional {
+.pricing__price__begin__button--professional {
   background-color: #07ACE6;
 }
-.pricing__price__begin--premium {
+.pricing__price__begin__button--premium {
   background-color: #55DFB4;
 }
 .pricing__price--basic {
