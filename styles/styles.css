@@ -436,4 +436,48 @@ p, a, label, button {
   border-radius: 35px;
   font-size: 0.812em;
   filter: drop-shadow(5px 10px 14px rgba(7, 172, 230, 0.2901960784));
+}
+
+.footer {
+  height: 90px;
+  width: 100%;
+  padding: 23px 2em 22px 2em;
+  filter: drop-shadow(0px -5px 40px rgba(0, 0, 0, 0.2));
+  background-color: #F7F7F7;
+}
+.footer__interior {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.footer__interior > * {
+  display: inline-block;
+}
+.footer__interior__owner {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.footer__interior__owner__title {
+  color: #08A6E4;
+  font-size: 1.625em;
+  font-weight: 300;
+}
+.footer__interior__owner__subtitle {
+  color: #A5A5A5;
+  font-size: 0.6875em;
+  font-weight: 300;
+}
+.footer__interior__social {
+  position: absolute;
+  top: 20%;
+  bottom: 0;
+  right: 0;
+}
+.footer__interior__social > * {
+  display: inline-block;
+  margin: auto 0;
+}
+.footer__interior__social__network {
+  margin-left: 1.1em;
 }/*# sourceMappingURL=styles.css.map */
