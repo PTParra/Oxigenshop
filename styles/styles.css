@@ -234,7 +234,8 @@ p, a, label, button {
   padding-bottom: 60%;
 }
 .information__description__text-zone {
-  margin-left: 0.6em;
+  margin-left: 1.2em;
+  width: 95%;
 }
 .information__description__text-zone__title {
   font-size: 1.9em;
@@ -244,6 +245,8 @@ p, a, label, button {
 }
 .information__description__text-zone__text {
   font-size: 0.9em;
+  line-height: 1.4em;
+  width: 90%;
 }
 .information__description--divided {
   padding-bottom: 0;
@@ -254,6 +257,10 @@ p, a, label, button {
 }
 .information__description--divided .information__description__text-zone__text {
   font-size: 1em;
+  line-height: 1.5em;
+}
+.information__description--divided .information__description__text-zone__title {
+  width: 80%;
 }
 
 .pricing {
