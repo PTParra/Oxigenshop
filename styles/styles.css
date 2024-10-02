@@ -241,6 +241,9 @@ p, a, label, button {
   width: 70%;
   margin-bottom: 0.8em;
 }
+.information__description__text-zone__text {
+  font-size: 0.9em;
+}
 .information__description--divided {
   padding-bottom: 0;
   margin-bottom: 0;
@@ -248,16 +251,90 @@ p, a, label, button {
 .information__description--divided .information__description__text-zone {
   margin-bottom: 1.2em;
 }
+.information__description--divided .information__description__text-zone__text {
+  font-size: 1em;
+}
 
-/*
-
-ESTO ES PARA HACER LA FORMA DE DETRAAS DEL PORTATIL DEL PRIMER CONTENEDOR
-    width: 100px;
-    height: 100px;
-    margin: 0 auto;
-    background-color: #FB3B64;
-    border-radius: 31px;
-    transform: rotate(45deg);
-
-
-*//*# sourceMappingURL=styles.css.map */
+.pricing {
+  padding-top: 3em;
+}
+.pricing__title {
+  font-size: 2.2em;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+.pricing__price {
+  position: relative;
+  width: 80%;
+  margin: 0 auto 3.4em auto;
+  padding: 1.7em 0;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 18px;
+  display: flex;
+}
+.pricing__price__type {
+  width: 50%;
+  text-align: center;
+}
+.pricing__price__type__title {
+  margin-top: 2.5em;
+  font-size: 1.25em;
+}
+.pricing__price__type__price {
+  font-size: 2.875em;
+  font-weight: 300;
+}
+.pricing__price__perks {
+  width: 50%;
+  list-style: none;
+}
+.pricing__price__perks__perk {
+  margin-bottom: 1.5em;
+}
+.pricing__price__perks__perk * {
+  display: inline-block;
+}
+.pricing__price__perks__perk__image {
+  margin-right: 0.3em;
+}
+.pricing__price__perks__perk__description {
+  font-size: 0.875em;
+}
+.pricing__price__begin {
+  color: white;
+  border-radius: 23px;
+  padding: 0.8em 3em;
+  text-decoration: none;
+  position: absolute;
+  bottom: -23px;
+  left: 27%;
+}
+.pricing__price__begin--basic {
+  background-color: #EB476E;
+}
+.pricing__price__begin--professional {
+  background-color: #07ACE6;
+}
+.pricing__price__begin--premium {
+  background-color: #55DFB4;
+}
+.pricing__price--basic {
+  border-color: #EB476E;
+}
+.pricing__price--basic .pricing__price__type .pricing__price__type__price {
+  color: #EB476E;
+}
+.pricing__price--professional {
+  border-color: #07ACE6;
+}
+.pricing__price--professional .pricing__price__type .pricing__price__type__price {
+  color: #07ACE6;
+}
+.pricing__price--premium {
+  border-color: #55DFB4;
+}
+.pricing__price--premium .pricing__price__type .pricing__price__type__price {
+  color: #55DFB4;
+}/*# sourceMappingURL=styles.css.map */

@@ -85,6 +85,9 @@
                 width: 70%;
                 margin-bottom: .8em;
             }
+            &__text{
+                font-size: .9em;
+            }
         }
     }
 
@@ -93,19 +96,10 @@
         margin-bottom: 0;
         .information__description__text-zone{
             margin-bottom: 1.2em;
+
+            &__text{
+                font-size: 1em;
+            }
         }
     }
 }
-
-/*
-
-ESTO ES PARA HACER LA FORMA DE DETRAAS DEL PORTATIL DEL PRIMER CONTENEDOR
-    width: 100px;
-    height: 100px;
-    margin: 0 auto;
-    background-color: #FB3B64;
-    border-radius: 31px;
-    transform: rotate(45deg);
-
-
-*/
