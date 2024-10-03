@@ -700,6 +700,9 @@ p, a, label, button {
   text-align: center;
   color: #08A6E4;
 }
+.contact__form__consent:hover {
+  cursor: pointer;
+}
 .contact__form__label--uppercase {
   font-size: 0.7em;
   font-weight: 600;
@@ -720,7 +723,46 @@ p, a, label, button {
   font-size: 0.812em;
   filter: drop-shadow(5px 10px 14px rgba(7, 172, 230, 0.2901960784));
 }
+.contact__form__submit-button:hover {
+  cursor: pointer;
+}
 
+@media only screen and (min-width: 1000px) {
+  .contact {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 5em;
+    padding-bottom: 2.9em;
+  }
+  .contact__info {
+    width: 40%;
+    margin: 0;
+  }
+  .contact__info__title {
+    font-size: 3em;
+    margin-bottom: 0.4em;
+  }
+  .contact__info__subtitle {
+    margin-bottom: 2em;
+  }
+  .contact__info__types {
+    margin-bottom: 0;
+    display: flex;
+    gap: 1.5em;
+  }
+  .contact__info__types__type {
+    margin-bottom: 0;
+  }
+  .contact__form {
+    width: 50%;
+    margin: 0;
+  }
+  .contact__form__consent {
+    margin-bottom: 2.2em;
+  }
+}
 .footer {
   height: 90px;
   width: 100%;
