@@ -404,6 +404,87 @@ p, a, label, button {
   width: 80%;
 }
 
+@media only screen and (min-width: 1000px) {
+  .information {
+    padding: 6em 0;
+  }
+  .information__description {
+    width: 65%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .information__description__picture {
+    width: 40%;
+    margin: 0;
+  }
+  .information__description__picture__image--megaphone {
+    width: 75%;
+    margin: 0 auto;
+    position: absolute;
+    top: 25%;
+    left: 7%;
+  }
+  .information__description__picture--solo {
+    position: relative;
+    background-color: #55DFB4;
+    padding-bottom: 0;
+    width: 40%;
+  }
+  .information__description__text-zone {
+    margin: 0;
+    width: 35%;
+  }
+  .information__description__text-zone__title {
+    font-size: 2.1em;
+    margin-bottom: 0.8em;
+    margin-top: 1.5em;
+  }
+  .information__description__text-zone__text {
+    font-size: 1em;
+    line-height: 1.6em;
+    margin-bottom: 3em;
+  }
+  .information__description__text-zone__line {
+    width: 70%;
+    border-bottom: 4px solid;
+  }
+  .information__description__text-zone__line--red {
+    border-color: #FB3B64;
+  }
+  .information__description__text-zone__line--blue {
+    border-color: #08A6E4;
+  }
+  .information__description__text-zone__line--green {
+    border-color: #55DFB4;
+  }
+  .information__description--picture-right .information__description__picture {
+    order: 2;
+  }
+  .information__description--divided {
+    background-color: transparent;
+    border: none;
+    justify-content: space-between;
+    padding: 0;
+  }
+  .information__description--divided .information__description__text-zone {
+    margin-bottom: 0;
+    background-color: white;
+    border: 1px solid #E8E9ED;
+    width: 55%;
+    padding-top: 4.5em;
+    padding-left: 4.5em;
+    padding-right: 8em;
+    padding-bottom: 5.5em;
+  }
+  .information__description--divided .information__description__text-zone__text {
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+  .information__description--divided .information__description__text-zone__title {
+    width: 80%;
+    margin-top: 1em;
+  }
+}
 .pricing {
   padding-top: 3em;
 }

@@ -111,3 +111,100 @@
         }
     }
 }
+
+@media only screen and (min-width: 1000px) {
+    $colorRojo: #FB3B64;
+    $colorAzul: #08A6E4;
+    $colorVerde: #55DFB4;
+    .information{
+        padding: 6em 0;
+        &__description{
+            width: 65%;
+            display: flex;
+            justify-content: space-around;
+            &__picture{
+                width: 40%;
+                margin: 0;
+    
+                &__image--megaphone{
+                    width: 75%;
+                    margin: 0 auto;
+                    position: absolute;
+                    top: 25%;
+                    left: 7%;
+                }
+            }
+    
+            &__picture--solo{
+                position: relative;
+                background-color: #55DFB4;
+                padding-bottom: 0;
+                width: 40%;
+            }
+    
+            &__text-zone{
+                margin: 0;
+                width: 35%;
+                &__title{
+                    font-size: 2.1em;
+                    margin-bottom: .8em;
+                    margin-top: 1.5em;
+                }
+                &__text{
+                    font-size: 1em;
+                    line-height: 1.6em;
+                    margin-bottom: 3em;
+                }
+
+                &__line{
+                    width: 70%;
+                    border-bottom: 4px solid;
+                }
+
+                &__line--red{
+                    border-color: $colorRojo;
+                }
+
+                &__line--blue{
+                    border-color: $colorAzul;
+                }
+
+                &__line--green{
+                    border-color: $colorVerde;
+                }
+            }
+        }
+
+        &__description--picture-right{
+            .information__description__picture{
+                order: 2;
+            }
+        }
+    
+        &__description--divided{
+            background-color: transparent;
+            border: none;
+            justify-content: space-between;
+            padding: 0;
+            .information__description__text-zone{
+                margin-bottom: 0;
+                background-color: white;
+                border: 1px solid #E8E9ED;
+                width: 55%;
+                padding-top: 4.5em;
+                padding-left: 4.5em;
+                padding-right: 8em;
+                padding-bottom: 5.5em;
+                &__text{
+                    font-size: 1em;
+                    line-height: 1.5em;
+                }
+    
+                &__title{
+                    width: 80%;
+                    margin-top: 1em;
+                }
+            }
+        }
+    }
+}
