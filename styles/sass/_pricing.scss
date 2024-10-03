@@ -9,103 +9,166 @@
     $colorBasic: #EB476E;
     $colorProfesional: #07ACE6;
     $colorPremium: #55DFB4;
-    &__price{
-        position: relative;
-        width: 80%;
-        margin: 0 auto 3.4em auto;
-        padding: 1.7em 0;
-        border-style: solid;
-        border-width: 1px;
-        border-radius: 18px;
-        display: flex;
-        &__type{
-            width: 50%;
-            text-align: center;
-            &__title{
-                margin-top: 2.5em;
-                font-size: 1.25em;
-            }
+    
+    &__prices{
 
-            &__price{
-                font-size: 2.875em;
-                font-weight: 300;
-            }
-        }
-
-        &__perks{
-            width: 50%;
-            list-style: none;
-
-            &__perk{
-                margin-bottom: 1.5em;
-                & *{
-                    display: inline-block;
+        &__price{
+            position: relative;
+            width: 80%;
+            margin: 0 auto 3.4em auto;
+            padding: 1.7em 0;
+            border-style: solid;
+            border-width: 1px;
+            border-radius: 18px;
+            display: flex;
+            &__type{
+                width: 50%;
+                text-align: center;
+                &__title{
+                    margin-top: 2.5em;
+                    font-size: 1.25em;
                 }
-
-                &__image{
-                    margin-right: .3em;
-                }
-
-                &__description{
-                    font-size: .875em;
+    
+                &__price{
+                    font-size: 2.875em;
+                    font-weight: 300;
                 }
             }
-        }
-
-        &__begin{
+    
+            &__perks{
+                width: 50%;
+                list-style: none;
+    
+                &__perk{
+                    margin-bottom: 1.5em;
+                    & *{
+                        display: inline-block;
+                    }
+    
+                    &__image{
+                        margin-right: .3em;
+                    }
+    
+                    &__description{
+                        font-size: .875em;
+                    }
+                }
+            }
+    
+            &__begin{
+                
+                position: absolute;
+                bottom: -10px;
+                left: 0;
+                right: 0;
+                text-align: center;
+    
+                &__button{
+                    color: white;
+                    border-radius: 23px;
+                    padding: .8em 3em;
+                    text-decoration: none;
+                }
+                &__button--basic{
+                    background-color: $colorBasic;
+                }
+                &__button--professional{
+                    background-color: $colorProfesional;
+                }
+                &__button--premium{
+                    background-color: $colorPremium;
+                }
+            }
+    
             
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            right: 0;
-            text-align: center;
-
-            &__button{
-                color: white;
-                border-radius: 23px;
-                padding: .8em 3em;
-                text-decoration: none;
-            }
-            &__button--basic{
-                background-color: $colorBasic;
-            }
-            &__button--professional{
-                background-color: $colorProfesional;
-            }
-            &__button--premium{
-                background-color: $colorPremium;
+        }
+    
+        &__price--basic{
+            border-color: $colorBasic;
+            .pricing__prices__price__type{
+    
+                .pricing__prices__price__type__price{
+                    color: $colorBasic;
+                }
             }
         }
+    
+        &__price--professional{
+            border-color: $colorProfesional;
+            .pricing__prices__price__type{
+    
+                .pricing__prices__price__type__price{
+                    color: $colorProfesional;
+                }
+            }
+        }
+    
+        &__price--premium{
+            border-color: $colorPremium;
+            .pricing__prices__price__type{
+    
+                .pricing__prices__price__type__price{
+                    color: $colorPremium;
+                }
+            }
+        }
+    }
+}
 
+@media only screen and (min-width: 1000px) {
+    .pricing{
+        padding-top: 8em;
+        padding-bottom: 4em;
+        &__title{
+            margin-bottom: 1.5em;
+        }
         
-    }
-
-    &__price--basic{
-        border-color: $colorBasic;
-        .pricing__price__type{
-
-            .pricing__price__type__price{
-                color: $colorBasic;
+        &__prices{
+            display: flex;
+            width: 90%;
+            margin: 0 auto;
+            &__price{
+                position: relative;
+                width: 25%;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding-top: 0;
+                padding-bottom: 3em;
+                gap: 3em;
+                flex-shrink: 0;
+                transition: transform 0.2s ease-out, box-shadow .2s ease-out;
+                &__type{
+                    width: 50%;
+                    text-align: center;
+                    &__title{
+                        margin-top: 2em;
+                        margin-bottom: 1em;
+                        font-size: 1.25em;
+                    }
+        
+                    &__price{
+                        margin-bottom: .4em;
+                    }
+                }
+        
+                
             }
-        }
-    }
 
-    &__price--professional{
-        border-color: $colorProfesional;
-        .pricing__price__type{
-
-            .pricing__price__type__price{
-                color: $colorProfesional;
+            &__price:hover{
+                transform: scale(1.1);
             }
-        }
-    }
-
-    &__price--premium{
-        border-color: $colorPremium;
-        .pricing__price__type{
-
-            .pricing__price__type__price{
-                color: $colorPremium;
+        
+            &__price--basic:hover{
+                box-shadow: (5px 10px 27px #EB476E4A);
+            }
+        
+            &__price--professional:hover{
+                box-shadow: (5px 10px 27px #07ACE64A);
+            }
+        
+            &__price--premium:hover{
+                box-shadow: (5px 10px 27px #55DFB44A);
             }
         }
     }
