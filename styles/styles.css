@@ -410,19 +410,37 @@ p, a, label, button {
   }
   .information__description {
     width: 65%;
+    max-height: 370px;
+    padding: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
   }
   .information__description__picture {
-    width: 40%;
+    width: 30%;
     margin: 0;
+    display: flex;
+  }
+  .information__description__picture__image {
+    height: auto;
+    width: 100%;
+    margin: auto 0;
   }
   .information__description__picture__image--megaphone {
     width: 75%;
+    height: auto;
     margin: 0 auto;
     position: absolute;
     top: 25%;
     left: 7%;
+  }
+  .information__description__picture__shape--red {
+    right: 5%;
+    top: 13%;
+  }
+  .information__description__picture__shape--blue {
+    top: 8%;
+    left: 5%;
+    width: 75%;
   }
   .information__description__picture--solo {
     position: relative;
@@ -432,20 +450,27 @@ p, a, label, button {
   }
   .information__description__text-zone {
     margin: 0;
-    width: 35%;
+    padding: 4em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    width: 55%;
+    padding-top: 4.5em;
+    padding-left: 4.5em;
+    padding-right: 8em;
+    padding-bottom: 5.5em;
   }
   .information__description__text-zone__title {
     font-size: 2.1em;
-    margin-bottom: 0.8em;
-    margin-top: 1.5em;
   }
   .information__description__text-zone__text {
     font-size: 1em;
     line-height: 1.6em;
-    margin-bottom: 3em;
+    margin-bottom: 1em;
   }
   .information__description__text-zone__line {
-    width: 70%;
+    width: 55%;
     border-bottom: 4px solid;
   }
   .information__description__text-zone__line--red {
@@ -456,6 +481,12 @@ p, a, label, button {
   }
   .information__description__text-zone__line--green {
     border-color: #55DFB4;
+  }
+  .information__description__text-zone--right {
+    padding-top: 4.5em;
+    padding-left: 12.5em;
+    padding-right: 0;
+    padding-bottom: 5.5em;
   }
   .information__description--picture-right .information__description__picture {
     order: 2;
@@ -483,6 +514,9 @@ p, a, label, button {
   .information__description--divided .information__description__text-zone__title {
     width: 80%;
     margin-top: 1em;
+  }
+  .information__description--divided .information__description__text-zone__line {
+    margin-bottom: 2em;
   }
 }
 .pricing {
