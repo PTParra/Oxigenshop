@@ -331,14 +331,15 @@ p, a, label, button {
 }
 .information__description__picture {
   width: 90%;
-  margin: 0 auto;
+  margin: 0 auto 1.5em auto;
   position: relative;
-  padding: 2.5em 0;
+}
+.information__description__picture__shape {
+  position: absolute;
 }
 .information__description__picture__shape--red {
-  position: absolute;
   right: 15%;
-  top: 9%;
+  top: 5%;
   width: 30%;
   background-color: #FB3B64;
   border-radius: 31px;
@@ -351,10 +352,9 @@ p, a, label, button {
   padding-bottom: 100%;
 }
 .information__description__picture__shape--blue {
-  position: absolute;
-  left: 10%;
-  top: 10%;
-  width: 50%;
+  left: 23%;
+  top: -3%;
+  width: 55%;
   background-color: #08A6E4;
   border-radius: 9999px;
   z-index: 0;
@@ -364,24 +364,34 @@ p, a, label, button {
   display: block;
   padding-bottom: 100%;
 }
-.information__description__picture__image {
+.information__description__picture__shape__image {
   position: inherit;
   display: block;
 }
-.information__description__picture__image--laptop {
-  width: 80%;
+.information__description__picture__shape__image--laptop {
+  transform: rotate(-45deg);
+  width: 250%;
   margin: 0 auto;
+  top: 60%;
+  right: -50%;
 }
-.information__description__picture__image--phone {
-  width: 70%;
+.information__description__picture__shape__image--phone {
+  width: 140%;
   margin: 0 auto;
+  top: 5%;
+  left: 0;
 }
 .information__description__picture__image--megaphone {
   width: 75%;
   margin: 0 auto;
   position: absolute;
-  top: 15%;
-  left: 0;
+  top: 20%;
+  left: 5%;
+}
+.information__description__picture::before {
+  content: "";
+  display: block;
+  padding-bottom: 50%;
 }
 .information__description__picture--solo {
   position: relative;
@@ -423,57 +433,48 @@ p, a, label, button {
     padding: 6em 0;
   }
   .information__description {
-    width: 65%;
-    max-height: 370px;
-    padding: 0;
+    width: 70%;
+    padding: 4em 0;
     display: flex;
     justify-content: center;
+    gap: 2em;
   }
   .information__description__picture {
-    width: 30%;
+    width: 40%;
     margin: 0;
-    display: flex;
   }
-  .information__description__picture__image {
-    height: auto;
-    width: 100%;
-    margin: auto 0;
+  .information__description__picture__shape__image--laptop {
+    width: 275%;
+    top: 60%;
+    right: -60%;
   }
-  .information__description__picture__image--megaphone {
-    width: 75%;
-    height: auto;
-    margin: 0 auto;
-    position: absolute;
-    top: 25%;
-    left: 7%;
+  .information__description__picture__shape__image--phone {
+    width: 125%;
+    top: 10%;
+    right: -10%;
   }
   .information__description__picture__shape--red {
-    right: 5%;
-    top: 13%;
+    right: 10%;
+    top: 5%;
   }
   .information__description__picture__shape--blue {
-    top: 8%;
-    left: 5%;
-    width: 75%;
+    top: -10%;
+    left: 15%;
+    width: 60%;
   }
   .information__description__picture--solo {
     position: relative;
-    background-color: #55DFB4;
     padding-bottom: 0;
     width: 40%;
   }
   .information__description__text-zone {
     margin: 0;
-    padding: 4em 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 1em;
     width: 55%;
-    padding-top: 4.5em;
-    padding-left: 4.5em;
-    padding-right: 8em;
-    padding-bottom: 5.5em;
   }
   .information__description__text-zone__title {
     font-size: 2.1em;
@@ -496,11 +497,8 @@ p, a, label, button {
   .information__description__text-zone__line--green {
     border-color: #55DFB4;
   }
-  .information__description__text-zone--right {
-    padding-top: 4.5em;
-    padding-left: 12.5em;
-    padding-right: 0;
-    padding-bottom: 5.5em;
+  .information__description--picture-right {
+    gap: 0;
   }
   .information__description--picture-right .information__description__picture {
     order: 2;
@@ -516,10 +514,10 @@ p, a, label, button {
     background-color: white;
     border: 1px solid #E8E9ED;
     width: 55%;
-    padding-top: 4.5em;
-    padding-left: 4.5em;
-    padding-right: 8em;
-    padding-bottom: 5.5em;
+    padding-top: 3em;
+    padding-left: 1.8em;
+    padding-right: 0;
+    padding-bottom: 3em;
   }
   .information__description--divided .information__description__text-zone__text {
     font-size: 1em;
