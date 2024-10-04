@@ -1,92 +1,116 @@
-.information{
-    background-color: #F7F7F7;
+$colorRojo: #FB3B64;
+$colorAzul: #08A6E4;
+$colorVerde: #55DFB4;
+$fondoTarjeta: #FFFFFF;
+$colorBorde: #E8E9ED;
+$fondoSeccion: #F7F7F7;
+
+.information {
+    background-color: $fondoSeccion;
     padding: 3em 0;
-    &__description{
+
+    &__description {
         width: 85%;
         margin: 0 auto 2em auto;
         background-color: white;
-        border: 1px solid #E8E9ED;
+        border: 1px solid $colorBorde;
         border-radius: 5px;
         padding: 1.5em 0;
-        &__picture{
+
+        &__picture {
             width: 90%;
-            margin: 0 auto;
+            margin: 0 auto 1.5em auto;
             position: relative;
-            padding: 2.5em 0;
 
-            &__shape--red{
+            &__shape {
                 position: absolute;
-                right: 15%;
-                top: 9%;
-                width: 30%;
-                background-color: #FB3B64;
-                border-radius: 31px;
-                transform: rotate(45deg);
-                z-index: 0;
+
+                &--red {
+                    right: 15%;
+                    top: 5%;
+                    width: 30%;
+                    background-color: $colorRojo;
+                    border-radius: 31px;
+                    transform: rotate(45deg);
+                    z-index: 0;
+                }
+
+                &--red::before {
+                    content: '';
+                    display: block;
+                    padding-bottom: 100%;
+                }
+
+                &--blue {
+                    left: 23%;
+                    top: -3%;
+                    width: 55%;
+                    background-color: $colorAzul;
+                    border-radius: 9999px;
+                    z-index: 0;
+                }
+
+                &--blue::before {
+                    content: '';
+                    display: block;
+                    padding-bottom: 100%;
+                }
+
+                &__image {
+                    position: inherit;
+                    display: block;
+                }
+
+                &__image--laptop {
+                    transform: rotate(-45deg);
+                    width: 250%;
+                    margin: 0 auto;
+                    top: 60%;
+                    right: -50%;
+                }
+
+                &__image--phone {
+                    width: 140%;
+                    margin: 0 auto;
+                    top: 5%;
+                    left: 0;
+                }
+
             }
 
-            &__shape--red::before{
-                content: '';
-                display: block;
-                padding-bottom: 100%;
-            }
-
-            &__shape--blue{
-                position: absolute;
-                left: 10%;
-                top: 10%;
-                width: 50%;
-                background-color: #08A6E4;
-                border-radius: 9999px;
-                z-index: 0;
-            }
-
-            &__shape--blue::before{
-                content: '';
-                display: block;
-                padding-bottom: 100%;
-            }
-
-            &__image{
-                position: inherit;
-                display: block;
-            }
-
-            &__image--laptop{
-                width: 80%;
-                margin: 0 auto;
-            }
-
-            &__image--phone{
-                width: 70%;
-                margin: 0 auto;
-            }
-
-            &__image--megaphone{
+            &__image--megaphone {
                 width: 75%;
                 margin: 0 auto;
                 position: absolute;
-                top: 15%;
-                left: 0;
+                top: 20%;
+                left: 5%;
             }
         }
 
-        &__picture--solo{
+        &__picture::before {
+            content: '';
+            display: block;
+            padding-bottom: 50%;
+        }
+
+        &__picture--solo {
             position: relative;
-            background-color: #55DFB4;
+            background-color: $colorVerde;
             padding-bottom: 60%;
         }
 
-        &__text-zone{
+        &__text-zone {
             margin-left: 1.2em;
             width: 95%;
-            &__title{
+
+            &__title {
                 font-size: 1.9em;
                 font-weight: 400;
                 width: 70%;
                 margin-bottom: .8em;
             }
-            &__text{
+
+            &__text {
                 font-size: .9em;
                 line-height: 1.4em;
                 width: 90%;
@@ -94,18 +118,19 @@
         }
     }
 
-    &__description--divided{
+    &__description--divided {
         padding-bottom: 0;
         margin-bottom: 0;
-        .information__description__text-zone{
+
+        .information__description__text-zone {
             margin-bottom: 1.2em;
-            
-            &__text{
+
+            &__text {
                 font-size: 1em;
                 line-height: 1.5em;
             }
 
-            &__title{
+            &__title {
                 width: 80%;
             }
         }
@@ -113,136 +138,126 @@
 }
 
 @media only screen and (min-width: 1000px) {
-    $colorRojo: #FB3B64;
-    $colorAzul: #08A6E4;
-    $colorVerde: #55DFB4;
-    .information{
+    .information {
         padding: 6em 0;
-        &__description{
-            width: 65%;
-            max-height: 370px;
-            padding: 0;
+
+        &__description {
+            width: 70%;
+            padding: 4em 0;
             display: flex;
             justify-content: center;
-            &__picture{
-                width: 30%;
+            gap: 2em;
+
+            &__picture {
+                width: 40%;
                 margin: 0;
-                display: flex;
 
-                &__image{
-                    height: auto;
-                    width: 100%;
-                    margin: auto 0;
+                &__shape{
+
+                    &__image--laptop{
+                        width: 275%;
+                        top: 60%;
+                        right: -60%;
+                    }
+
+                    &__image--phone{
+                        width: 125%;
+                        top: 10%;
+                        right: -10%;
+                    }
                 }
 
-
-    
-                &__image--megaphone{
-                    width: 75%;
-                    height: auto;
-                    margin: 0 auto;
-                    position: absolute;
-                    top: 25%;
-                    left: 7%;
+                &__shape--red {
+                    right: 10%;
+                    top: 5%;
                 }
 
-                &__shape--red{
-                    right: 5%;
-                    top: 13%;
-                }
-
-                &__shape--blue{
-                    top: 8%;
-                    left: 5%;
-                    width: 75%;
+                &__shape--blue {
+                    top: -10%;
+                    left: 15%;
+                    width: 60%;
                 }
             }
-    
-            &__picture--solo{
+
+            &__picture--solo {
                 position: relative;
-                background-color: #55DFB4;
                 padding-bottom: 0;
                 width: 40%;
             }
-    
-            &__text-zone{
+
+            &__text-zone {
                 margin: 0;
-                padding: 4em 0;
+                padding: 0;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 gap: 1em;
                 width: 55%;
-                padding-top: 4.5em;
-                padding-left: 4.5em;
-                padding-right: 8em;
-                padding-bottom: 5.5em;
-                &__title{
+
+                &__title {
                     font-size: 2.1em;
                 }
-                &__text{
+
+                &__text {
                     font-size: 1em;
                     line-height: 1.6em;
                     margin-bottom: 1em;
                 }
 
-                &__line{
+                &__line {
                     width: 55%;
                     border-bottom: 4px solid;
                 }
 
-                &__line--red{
+                &__line--red {
                     border-color: $colorRojo;
                 }
 
-                &__line--blue{
+                &__line--blue {
                     border-color: $colorAzul;
                 }
 
-                &__line--green{
+                &__line--green {
                     border-color: $colorVerde;
                 }
             }
 
-            &__text-zone--right{
-                padding-top: 4.5em;
-                padding-left: 12.5em;
-                padding-right: 0;
-                padding-bottom: 5.5em;
-            }
         }
 
-        &__description--picture-right{
-            .information__description__picture{
+        &__description--picture-right {
+            gap: 0;
+            .information__description__picture {
                 order: 2;
             }
         }
-    
-        &__description--divided{
+
+        &__description--divided {
             background-color: transparent;
             border: none;
             justify-content: space-between;
             padding: 0;
-            .information__description__text-zone{
+
+            .information__description__text-zone {
                 margin-bottom: 0;
                 background-color: white;
-                border: 1px solid #E8E9ED;
+                border: 1px solid $colorBorde;
                 width: 55%;
-                padding-top: 4.5em;
-                padding-left: 4.5em;
-                padding-right: 8em;
-                padding-bottom: 5.5em;
-                &__text{
+                padding-top: 3em;
+                padding-left: 1.8em;
+                padding-right: 0;
+                padding-bottom: 3em;
+
+                &__text {
                     font-size: 1em;
                     line-height: 1.5em;
                 }
-    
-                &__title{
+
+                &__title {
                     width: 80%;
                     margin-top: 1em;
                 }
 
-                &__line{
+                &__line {
                     margin-bottom: 2em;
                 }
             }
