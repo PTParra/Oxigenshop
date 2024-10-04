@@ -1,0 +1,111 @@
+$colorRojo: #FB3B64;
+$colorAzul: #08A6E4;
+$colorVerde: #55DFB4;
+
+.popularity {
+    &__title {
+        font-weight: 300;
+        font-size: 1.9em;
+        width: 75%;
+        text-align: center;
+        margin: 0 auto .8em auto;
+    }
+
+    &__numbers {
+
+        &__number {
+            text-align: center;
+            width: 180px;
+            margin: 0 auto 2em auto;
+
+            &__icon {
+                position: relative;
+                width: 65px;
+                height: 65px;
+                margin: 0 auto .8em auto;
+
+                &__circle {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 9999px;
+                }
+
+                &__circle--red {
+                    background-color: $colorRojo;
+                }
+
+                &__circle--blue {
+                    background-color: $colorAzul;
+                }
+
+                &__circle--green {
+                    background-color: $colorVerde;
+                }
+
+                &__image {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto 0;
+                }
+
+                &__image--person {
+                    left: 53%;
+                }
+
+                &__image--eye {
+                    left: 32%;
+                }
+
+                &__image--posts {
+                    left: 50%;
+                }
+            }
+
+            &__title {
+                font-size: 1.3em;
+                font-weight: 800;
+                letter-spacing: .25em;
+                margin-bottom: .8em;
+            }
+
+            &__subtitle {
+                color: #A5A5A5;
+                font-weight: 400;
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .popularity {
+        padding-bottom: 6.5em;
+
+        &__title {
+            font-size: 2.25em;
+            margin-bottom: 2.4em;
+        }
+
+        &__numbers {
+            display: flex;
+            width: 55%;
+            margin: 0 auto;
+
+            &__number {
+
+                &__title {
+                    font-size: 1.3em;
+                }
+
+                &__subtitle {
+                    width: 80%;
+                }
+            }
+        }
+    }
+}

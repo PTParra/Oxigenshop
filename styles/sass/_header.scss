@@ -1,9 +1,10 @@
-.header{
+.navbar {
     position: relative;
     height: 70px;
     background-color: white;
     filter: drop-shadow(0 3px 6px rgba(0, 0, 0, .29));
-    &__nav{
+
+    &__container {
         width: 85%;
         height: 70%;
         position: absolute;
@@ -12,7 +13,8 @@
         left: 0;
         right: 0;
         margin: auto;
-        &__title{
+
+        &__title {
             font-size: 2em;
             font-weight: 300;
             color: #08A6E4;
@@ -21,13 +23,13 @@
             top: 15%;
         }
 
-        
 
-        & > *{
+
+        &>* {
             display: inline-block;
         }
 
-        &__button{
+        &__button {
             position: absolute;
             right: 0;
             top: 40%;
@@ -36,38 +38,161 @@
         }
 
 
-        &__links{
+        &__links {
             display: none;
         }
     }
-    
+}
+
+$colorRojo: #FB3B64;
+$colorAzul: #08A6E4;
+$colorVerde: #55DFB4;
+
+.front {
+    padding-top: 4em;
+
+    &__sell {
+        text-align: center;
+
+        &__title {
+            font-size: 2.2em;
+            font-weight: 400;
+            margin-bottom: .3em;
+        }
+
+        &__subtitle {
+            width: 75%;
+            margin: 0 auto;
+            margin-bottom: 3em;
+        }
+
+        &__link {
+            display: inline-block;
+            background-color: #08A6E4;
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            padding: 1.2em 5em;
+            border-radius: 50px;
+            filter: drop-shadow(5px 10px 14px #07ACE64A);
+            margin-bottom: 1em;
+        }
+
+        &__image {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+    }
+
+    &__popularity {
+        &__title {
+            font-weight: 300;
+            font-size: 1.9em;
+            width: 75%;
+            text-align: center;
+            margin: 0 auto .8em auto;
+        }
+
+        &__numbers {
+
+            &__number {
+                text-align: center;
+                width: 180px;
+                margin: 0 auto 2em auto;
+
+                &__icon {
+                    position: relative;
+                    width: 65px;
+                    height: 65px;
+                    margin: 0 auto .8em auto;
+
+                    &__circle {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 9999px;
+                    }
+
+                    &__circle--red {
+                        background-color: $colorRojo;
+                    }
+
+                    &__circle--blue {
+                        background-color: $colorAzul;
+                    }
+
+                    &__circle--green {
+                        background-color: $colorVerde;
+                    }
+
+                    &__image {
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        margin: auto 0;
+                    }
+
+                    &__image--person {
+                        left: 53%;
+                    }
+
+                    &__image--eye {
+                        left: 32%;
+                    }
+
+                    &__image--posts {
+                        left: 50%;
+                    }
+                }
+
+                &__title {
+                    font-size: 1.3em;
+                    font-weight: 800;
+                    letter-spacing: .25em;
+                    margin-bottom: .8em;
+                }
+
+                &__subtitle {
+                    color: #A5A5A5;
+                    font-weight: 400;
+                    width: 80%;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (min-width: 1000px) {
-    .header{
-        &__nav{
+    .navbar {
+        &__container {
             position: static;
             height: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            &__title{
+
+            &__title {
                 position: static;
             }
-            &__button{
+
+            &__button {
                 display: none;
             }
 
-            &__links{
+            &__links {
                 height: 100%;
                 display: flex;
                 list-style: none;
                 gap: 5em;
-                
-                &__link{
+
+                &__link {
                     height: 100%;
-                    
-                    &__item{
+
+                    &__item {
                         height: 100%;
                         display: flex;
                         color: #A5A5A5;
@@ -78,17 +203,19 @@
                         text-transform: uppercase;
                         border-bottom: 4px solid #08A6E400;
                         transition: border-color .3s ease-out, color .3s ease-out;
-                        &__text{
+
+                        &__text {
                             display: inline-block;
                             margin: auto 0;
                         }
                     }
-                    &__item:hover{
+
+                    &__item:hover {
                         color: black;
                         border-color: #08A6E4;
                     }
 
-                    &__item.active{
+                    &__item.active {
                         color: black;
                         border-color: #08A6E4;
                     }
@@ -96,4 +223,33 @@
             }
         }
     }
+
+
+    .front {
+        padding-top: 8.1em;
+
+        &__sell {
+            margin-bottom: 1.5em;
+
+            &__title {
+                font-size: 3em;
+                margin-bottom: .4em;
+            }
+
+            &__subtitle {
+                margin-bottom: 2.5em;
+            }
+
+            &__link {
+                padding: 1.2em 9.6em;
+                margin-bottom: .8em;
+            }
+
+            &__image {
+                height: auto;
+                max-height: 595px;
+            }
+        }
+    }
+
 }
