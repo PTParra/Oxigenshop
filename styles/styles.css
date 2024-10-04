@@ -540,7 +540,7 @@ p, a, label, button {
   text-align: center;
   margin-bottom: 0.5em;
 }
-.pricing__prices__price {
+.pricing__prices .price {
   position: relative;
   width: 80%;
   margin: 0 auto 3.4em auto;
@@ -550,72 +550,72 @@ p, a, label, button {
   border-radius: 18px;
   display: flex;
 }
-.pricing__prices__price__type {
+.pricing__prices .price__type {
   width: 50%;
   text-align: center;
 }
-.pricing__prices__price__type__title {
+.pricing__prices .price__type__title {
   margin-top: 2.5em;
   font-size: 1.25em;
 }
-.pricing__prices__price__type__price {
+.pricing__prices .price__type__price {
   font-size: 2.875em;
   font-weight: 300;
 }
-.pricing__prices__price__perks {
+.pricing__prices .price__perks {
   width: 50%;
   list-style: none;
 }
-.pricing__prices__price__perks__perk {
+.pricing__prices .price__perks__perk {
   margin-bottom: 1.5em;
 }
-.pricing__prices__price__perks__perk * {
+.pricing__prices .price__perks__perk * {
   display: inline-block;
 }
-.pricing__prices__price__perks__perk__image {
+.pricing__prices .price__perks__perk__image {
   margin-right: 0.3em;
 }
-.pricing__prices__price__perks__perk__description {
+.pricing__prices .price__perks__perk__description {
   font-size: 0.875em;
 }
-.pricing__prices__price__begin {
+.pricing__prices .price__begin {
   position: absolute;
   bottom: -10px;
   left: 0;
   right: 0;
   text-align: center;
 }
-.pricing__prices__price__begin__button {
+.pricing__prices .price__begin__button {
   color: white;
   border-radius: 23px;
   padding: 0.8em 3em;
   text-decoration: none;
 }
-.pricing__prices__price__begin__button--basic {
+.pricing__prices .price__begin__button--basic {
   background-color: #EB476E;
 }
-.pricing__prices__price__begin__button--professional {
+.pricing__prices .price__begin__button--professional {
   background-color: #07ACE6;
 }
-.pricing__prices__price__begin__button--premium {
+.pricing__prices .price__begin__button--premium {
   background-color: #55DFB4;
 }
-.pricing__prices__price--basic {
+.pricing__prices .price--basic {
   border-color: #EB476E;
 }
-.pricing__prices__price--basic .pricing__prices__price__type .pricing__prices__price__type__price {
+.pricing__prices .price--basic .price__type .price__type__price {
   color: #EB476E;
 }
-.pricing__prices__price--professional {
+.pricing__prices .price--professional {
   border-color: #07ACE6;
 }
-.pricing__prices__price--professional .pricing__prices__price__type .pricing__prices__price__type__price {
+.pricing__prices .price--professional .price__type .price__type__price {
   color: #07ACE6;
 }
-.pricing__prices__price--premium {
+.pricing__prices .price--premium {
   border-color: #55DFB4;
 }
-.pricing__prices__price--premium .pricing__prices__price__type .pricing__prices__price__type__price {
+.pricing__prices .price--premium .price__type .price__type__price {
   color: #55DFB4;
 }
 
@@ -632,7 +632,7 @@ p, a, label, button {
     width: 90%;
     margin: 0 auto;
   }
-  .pricing__prices__price {
+  .pricing__prices .price {
     position: relative;
     width: 25%;
     flex-direction: column;
@@ -644,28 +644,31 @@ p, a, label, button {
     flex-shrink: 0;
     transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
   }
-  .pricing__prices__price__type {
+  .pricing__prices .price__type {
     width: 50%;
     text-align: center;
   }
-  .pricing__prices__price__type__title {
+  .pricing__prices .price__type__title {
     margin-top: 2em;
     margin-bottom: 1em;
     font-size: 1.25em;
   }
-  .pricing__prices__price__type__price {
+  .pricing__prices .price__type__price {
     margin-bottom: 0.4em;
   }
-  .pricing__prices__price:hover {
+  .pricing__prices .price__perks {
+    text-align: center;
+  }
+  .pricing__prices .price:hover {
     transform: scale(1.1);
   }
-  .pricing__prices__price--basic:hover {
+  .pricing__prices .price--basic:hover {
     box-shadow: 5px 10px 27px rgba(235, 71, 110, 0.2901960784);
   }
-  .pricing__prices__price--professional:hover {
+  .pricing__prices .price--professional:hover {
     box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.2901960784);
   }
-  .pricing__prices__price--premium:hover {
+  .pricing__prices .price--premium:hover {
     box-shadow: 5px 10px 27px rgba(85, 223, 180, 0.2901960784);
   }
 }

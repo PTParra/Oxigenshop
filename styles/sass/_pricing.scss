@@ -12,7 +12,7 @@
     
     &__prices{
 
-        &__price{
+        .price{
             position: relative;
             width: 80%;
             margin: 0 auto 3.4em auto;
@@ -83,31 +83,31 @@
             
         }
     
-        &__price--basic{
+        .price--basic{
             border-color: $colorBasic;
-            .pricing__prices__price__type{
+            .price__type{
     
-                .pricing__prices__price__type__price{
+                .price__type__price{
                     color: $colorBasic;
                 }
             }
         }
     
-        &__price--professional{
+        .price--professional{
             border-color: $colorProfesional;
-            .pricing__prices__price__type{
+            .price__type{
     
-                .pricing__prices__price__type__price{
+                .price__type__price{
                     color: $colorProfesional;
                 }
             }
         }
     
-        &__price--premium{
+        .price--premium{
             border-color: $colorPremium;
-            .pricing__prices__price__type{
+            .price__type{
     
-                .pricing__prices__price__type__price{
+                .price__type__price{
                     color: $colorPremium;
                 }
             }
@@ -127,7 +127,7 @@
             display: flex;
             width: 90%;
             margin: 0 auto;
-            &__price{
+            .price{
                 position: relative;
                 width: 25%;
                 flex-direction: column;
@@ -150,24 +150,28 @@
                     &__price{
                         margin-bottom: .4em;
                     }
+
+                    
                 }
         
-                
+                &__perks{
+                        text-align: center;
+                    }
             }
 
-            &__price:hover{
+            .price:hover{
                 transform: scale(1.1);
             }
         
-            &__price--basic:hover{
+            .price--basic:hover{
                 box-shadow: (5px 10px 27px #EB476E4A);
             }
         
-            &__price--professional:hover{
+            .price--professional:hover{
                 box-shadow: (5px 10px 27px #07ACE64A);
             }
         
-            &__price--premium:hover{
+            .price--premium:hover{
                 box-shadow: (5px 10px 27px #55DFB44A);
             }
         }
