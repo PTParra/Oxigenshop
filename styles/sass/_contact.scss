@@ -80,7 +80,7 @@
             }
 
             &__checkbox:checked + &__custom-checkbox::before{
-                content: '✓';
+                content: url('../../assets/icons/Checkmark_checkbox.png');
                 display: inline-block;
                 width: 100%;
                 text-align: center;
