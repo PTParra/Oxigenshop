@@ -1,3 +1,5 @@
+$colorOxigen: #08A6E4;
+
 .navbar {
     position: relative;
     height: 70px;
@@ -5,18 +7,12 @@
     filter: drop-shadow(0 3px 6px rgba(0, 0, 0, .29));
 
     width: 100%;
-    padding: 0 8em;
     position: relative;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
 
     &__title {
         font-size: 2em;
         font-weight: 300;
-        color: #08A6E4;
+        color: $colorOxigen;
         position: absolute;
         left: 5%;
         top: 25%;
@@ -42,10 +38,6 @@
     }
 }
 
-$colorRojo: #FB3B64;
-$colorAzul: #08A6E4;
-$colorVerde: #55DFB4;
-
 .front {
     padding-top: 4em;
 
@@ -66,7 +58,7 @@ $colorVerde: #55DFB4;
 
         &__link {
             display: inline-block;
-            background-color: #08A6E4;
+            background-color: $colorOxigen;
             color: white;
             text-decoration: none;
             font-weight: 700;
@@ -82,86 +74,6 @@ $colorVerde: #55DFB4;
             object-fit: cover;
         }
     }
-
-    &__popularity {
-        &__title {
-            font-weight: 300;
-            font-size: 1.9em;
-            width: 75%;
-            text-align: center;
-            margin: 0 auto .8em auto;
-        }
-
-        &__numbers {
-
-            &__number {
-                text-align: center;
-                width: 180px;
-                margin: 0 auto 2em auto;
-
-                &__icon {
-                    position: relative;
-                    width: 65px;
-                    height: 65px;
-                    margin: 0 auto .8em auto;
-
-                    &__circle {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        border-radius: 9999px;
-                    }
-
-                    &__circle--red {
-                        background-color: $colorRojo;
-                    }
-
-                    &__circle--blue {
-                        background-color: $colorAzul;
-                    }
-
-                    &__circle--green {
-                        background-color: $colorVerde;
-                    }
-
-                    &__image {
-                        position: absolute;
-                        top: 0;
-                        bottom: 0;
-                        margin: auto 0;
-                    }
-
-                    &__image--person {
-                        left: 53%;
-                    }
-
-                    &__image--eye {
-                        left: 32%;
-                    }
-
-                    &__image--posts {
-                        left: 50%;
-                    }
-                }
-
-                &__title {
-                    font-size: 1.3em;
-                    font-weight: 800;
-                    letter-spacing: .25em;
-                    margin-bottom: .8em;
-                }
-
-                &__subtitle {
-                    color: #A5A5A5;
-                    font-weight: 400;
-                    width: 80%;
-                    margin: 0 auto;
-                }
-            }
-        }
-    }
 }
 
 @media only screen and (min-width: 1000px) {
@@ -170,6 +82,8 @@ $colorVerde: #55DFB4;
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        padding: 0 8em;
 
         &__title {
             position: static;
@@ -208,12 +122,12 @@ $colorVerde: #55DFB4;
 
                 &__item:hover {
                     color: black;
-                    border-color: #08A6E4;
+                    border-color: $colorOxigen;
                 }
 
                 &__item.active {
                     color: black;
-                    border-color: #08A6E4;
+                    border-color: $colorOxigen;
                 }
             }
         }
