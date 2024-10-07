@@ -742,7 +742,7 @@ p, a, label, button {
   border-radius: 4px;
 }
 .contact__form__consent__checkbox:checked + .contact__form__consent__custom-checkbox::before {
-  content: url("../../assets/icons/Checkmark_checkbox.png");
+  content: url("../assets/icons/Checkmark_checkbox.png");
   display: inline-block;
   width: 100%;
   text-align: center;
