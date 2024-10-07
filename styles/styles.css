@@ -26,6 +26,14 @@ h4 {
   font-family: "Raleway", sans-serif;
 }
 
+h5 {
+  font-family: "Raleway", sans-serif;
+}
+
+h6 {
+  font-family: "Raleway", sans-serif;
+}
+
 p, a, label, button {
   font-family: "Open Sans", system-ui;
 }
@@ -617,20 +625,20 @@ p, a, label, button {
   font-weight: 400;
   margin-bottom: 2em;
 }
-.contact__info__types {
+.contact__info__types-container {
   margin-bottom: 3.3em;
 }
-.contact__info__types__type {
+.contact__info__types-container__type {
   margin-bottom: 0.9em;
 }
-.contact__info__types__type * {
+.contact__info__types-container__type * {
   display: inline-block;
   vertical-align: middle;
 }
-.contact__info__types__type__description-img {
+.contact__info__types-container__type__description-img {
   margin-right: 0.4em;
 }
-.contact__info__types__type__contact {
+.contact__info__types-container__type__contact {
   color: #A5A5A5;
 }
 .contact__form {
