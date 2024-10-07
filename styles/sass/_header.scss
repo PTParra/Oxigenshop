@@ -4,43 +4,41 @@
     background-color: white;
     filter: drop-shadow(0 3px 6px rgba(0, 0, 0, .29));
 
-    &__container {
-        width: 85%;
-        height: 70%;
+    width: 100%;
+    padding: 0 8em;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    &__title {
+        font-size: 2em;
+        font-weight: 300;
+        color: #08A6E4;
         position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-
-        &__title {
-            font-size: 2em;
-            font-weight: 300;
-            color: #08A6E4;
-            position: absolute;
-            left: 0;
-            top: 15%;
-        }
+        left: 5%;
+        top: 25%;
+    }
 
 
 
-        &>* {
-            display: inline-block;
-        }
+    &>* {
+        display: inline-block;
+    }
 
-        &__button {
-            position: absolute;
-            right: 0;
-            top: 40%;
-            border: none;
-            background-color: transparent;
-        }
+    &__button {
+        position: absolute;
+        right: 5%;
+        top: 40%;
+        border: none;
+        background-color: transparent;
+    }
 
 
-        &__links {
-            display: none;
-        }
+    &__links {
+        display: none;
     }
 }
 
@@ -168,57 +166,54 @@ $colorVerde: #55DFB4;
 
 @media only screen and (min-width: 1000px) {
     .navbar {
-        &__container {
+        position: static;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__title {
             position: static;
+        }
+
+        &__button {
+            display: none;
+        }
+
+        &__links {
             height: 100%;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            list-style: none;
+            gap: 5em;
 
-            &__title {
-                position: static;
-            }
-
-            &__button {
-                display: none;
-            }
-
-            &__links {
+            &__link {
                 height: 100%;
-                display: flex;
-                list-style: none;
-                gap: 5em;
 
-                &__link {
+                &__item {
                     height: 100%;
+                    display: flex;
+                    color: #A5A5A5;
+                    text-decoration: none;
+                    font-weight: 700;
+                    letter-spacing: .3em;
+                    font-size: 0.68em;
+                    text-transform: uppercase;
+                    border-bottom: 4px solid #08A6E400;
+                    transition: border-color .3s ease-out, color .3s ease-out;
 
-                    &__item {
-                        height: 100%;
-                        display: flex;
-                        color: #A5A5A5;
-                        text-decoration: none;
-                        font-weight: 700;
-                        letter-spacing: .3em;
-                        font-size: 0.68em;
-                        text-transform: uppercase;
-                        border-bottom: 4px solid #08A6E400;
-                        transition: border-color .3s ease-out, color .3s ease-out;
-
-                        &__text {
-                            display: inline-block;
-                            margin: auto 0;
-                        }
+                    &__text {
+                        display: inline-block;
+                        margin: auto 0;
                     }
+                }
 
-                    &__item:hover {
-                        color: black;
-                        border-color: #08A6E4;
-                    }
+                &__item:hover {
+                    color: black;
+                    border-color: #08A6E4;
+                }
 
-                    &__item.active {
-                        color: black;
-                        border-color: #08A6E4;
-                    }
+                &__item.active {
+                    color: black;
+                    border-color: #08A6E4;
                 }
             }
         }

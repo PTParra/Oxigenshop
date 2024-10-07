@@ -35,36 +35,34 @@ p, a, label, button {
   height: 70px;
   background-color: white;
   filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.29));
-}
-.navbar__container {
-  width: 85%;
-  height: 70%;
-  position: absolute;
+  width: 100%;
+  padding: 0 8em;
+  position: relative;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
 }
-.navbar__container__title {
+.navbar__title {
   font-size: 2em;
   font-weight: 300;
   color: #08A6E4;
   position: absolute;
-  left: 0;
-  top: 15%;
+  left: 5%;
+  top: 25%;
 }
-.navbar__container > * {
+.navbar > * {
   display: inline-block;
 }
-.navbar__container__button {
+.navbar__button {
   position: absolute;
-  right: 0;
+  right: 5%;
   top: 40%;
   border: none;
   background-color: transparent;
 }
-.navbar__container__links {
+.navbar__links {
   display: none;
 }
 
@@ -165,29 +163,28 @@ p, a, label, button {
 }
 
 @media only screen and (min-width: 1000px) {
-  .navbar__container {
+  .navbar {
     position: static;
-    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  .navbar__container__title {
+  .navbar__title {
     position: static;
   }
-  .navbar__container__button {
+  .navbar__button {
     display: none;
   }
-  .navbar__container__links {
+  .navbar__links {
     height: 100%;
     display: flex;
     list-style: none;
     gap: 5em;
   }
-  .navbar__container__links__link {
+  .navbar__links__link {
     height: 100%;
   }
-  .navbar__container__links__link__item {
+  .navbar__links__link__item {
     height: 100%;
     display: flex;
     color: #A5A5A5;
@@ -199,15 +196,15 @@ p, a, label, button {
     border-bottom: 4px solid rgba(8, 166, 228, 0);
     transition: border-color 0.3s ease-out, color 0.3s ease-out;
   }
-  .navbar__container__links__link__item__text {
+  .navbar__links__link__item__text {
     display: inline-block;
     margin: auto 0;
   }
-  .navbar__container__links__link__item:hover {
+  .navbar__links__link__item:hover {
     color: black;
     border-color: #08A6E4;
   }
-  .navbar__container__links__link__item.active {
+  .navbar__links__link__item.active {
     color: black;
     border-color: #08A6E4;
   }
