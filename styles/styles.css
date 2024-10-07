@@ -170,18 +170,18 @@ p, a, label, button {
   text-align: center;
   margin: 0 auto 0.8em auto;
 }
-.popularity__numbers__number {
+.popularity__numbers-container .number {
   text-align: center;
   width: 180px;
   margin: 0 auto 2em auto;
 }
-.popularity__numbers__number__icon {
+.popularity__numbers-container .number__icon {
   position: relative;
   width: 65px;
   height: 65px;
   margin: 0 auto 0.8em auto;
 }
-.popularity__numbers__number__icon__circle {
+.popularity__numbers-container .number__icon__circle {
   position: absolute;
   top: 0;
   left: 0;
@@ -189,37 +189,37 @@ p, a, label, button {
   height: 100%;
   border-radius: 9999px;
 }
-.popularity__numbers__number__icon__circle--red {
+.popularity__numbers-container .number__icon__circle--red {
   background-color: #FB3B64;
 }
-.popularity__numbers__number__icon__circle--blue {
+.popularity__numbers-container .number__icon__circle--blue {
   background-color: #08A6E4;
 }
-.popularity__numbers__number__icon__circle--green {
+.popularity__numbers-container .number__icon__circle--green {
   background-color: #55DFB4;
 }
-.popularity__numbers__number__icon__image {
+.popularity__numbers-container .number__icon__image {
   position: absolute;
   top: 0;
   bottom: 0;
   margin: auto 0;
 }
-.popularity__numbers__number__icon__image--person {
+.popularity__numbers-container .number__icon__image--person {
   left: 53%;
 }
-.popularity__numbers__number__icon__image--eye {
+.popularity__numbers-container .number__icon__image--eye {
   left: 32%;
 }
-.popularity__numbers__number__icon__image--posts {
+.popularity__numbers-container .number__icon__image--posts {
   left: 50%;
 }
-.popularity__numbers__number__title {
+.popularity__numbers-container .number__title {
   font-size: 1.3em;
   font-weight: 800;
   letter-spacing: 0.25em;
   margin-bottom: 0.8em;
 }
-.popularity__numbers__number__subtitle {
+.popularity__numbers-container .number__subtitle {
   color: #A5A5A5;
   font-weight: 400;
   width: 80%;
@@ -234,15 +234,15 @@ p, a, label, button {
     font-size: 2.25em;
     margin-bottom: 2.4em;
   }
-  .popularity__numbers {
+  .popularity__numbers-container {
     display: flex;
     width: 55%;
     margin: 0 auto;
   }
-  .popularity__numbers__number__title {
+  .popularity__numbers-container .number__title {
     font-size: 1.3em;
   }
-  .popularity__numbers__number__subtitle {
+  .popularity__numbers-container .number__subtitle {
     width: 80%;
   }
 }

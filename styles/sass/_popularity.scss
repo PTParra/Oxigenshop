@@ -11,9 +11,9 @@ $colorVerde: #55DFB4;
         margin: 0 auto .8em auto;
     }
 
-    &__numbers {
+    &__numbers-container {
 
-        &__number {
+        .number {
             text-align: center;
             width: 180px;
             margin: 0 auto 2em auto;
@@ -91,12 +91,12 @@ $colorVerde: #55DFB4;
             margin-bottom: 2.4em;
         }
 
-        &__numbers {
+        &__numbers-container {
             display: flex;
             width: 55%;
             margin: 0 auto;
 
-            &__number {
+            .number {
 
                 &__title {
                     font-size: 1.3em;
