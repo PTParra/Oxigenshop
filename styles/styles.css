@@ -714,6 +714,9 @@ p, a, label, button {
   display: block;
   margin-bottom: 2.5em;
 }
+.contact__form__text-input:focus-visible {
+  outline: none;
+}
 .contact__form__consent {
   position: relative;
   display: block;

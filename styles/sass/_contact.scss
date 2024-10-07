@@ -50,6 +50,10 @@
             margin-bottom: 2.5em;
         }
 
+        &__text-input:focus-visible{
+            outline: none;
+        }
+
         &__consent{
             position: relative;
             display: block;
