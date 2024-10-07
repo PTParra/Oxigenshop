@@ -736,12 +736,12 @@ p, a, label, button {
   .contact__info__subtitle {
     margin-bottom: 2em;
   }
-  .contact__info__types {
+  .contact__info__types-container {
     margin-bottom: 0;
     display: flex;
     gap: 1.5em;
   }
-  .contact__info__types__type {
+  .contact__info__types-container__type {
     margin-bottom: 0;
   }
   .contact__form {
