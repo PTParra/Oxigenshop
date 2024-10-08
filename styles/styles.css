@@ -230,7 +230,7 @@ p, a, label, button {
 .popularity__numbers-container .number__subtitle {
   color: #A5A5A5;
   font-weight: 400;
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
 }
 
@@ -247,11 +247,8 @@ p, a, label, button {
     width: 55%;
     margin: 0 auto;
   }
-  .popularity__numbers-container .number__title {
-    font-size: 1.3em;
-  }
   .popularity__numbers-container .number__subtitle {
-    width: 80%;
+    width: 60%;
   }
 }
 .information {
@@ -640,6 +637,7 @@ p, a, label, button {
 }
 .contact__info__types-container__type__contact {
   color: #A5A5A5;
+  text-decoration: none;
 }
 .contact__form {
   width: 85%;
