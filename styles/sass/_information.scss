@@ -15,68 +15,32 @@ $fondoSeccion: #F7F7F7;
         background-color: white;
         border: 1px solid $colorBorde;
         border-radius: 5px;
-        padding: 1.5em 0;
+        padding: 1.5em .5em;
 
         &__picture {
             width: 90%;
             margin: 0 auto 1.5em auto;
             position: relative;
+            
+            padding-top: 1em;
+            padding-bottom: 3em;
 
-            &__shape {
+            &__image--laptop {
+                width: 80%;
                 position: absolute;
-
-                &--red {
-                    right: 15%;
-                    top: 5%;
-                    width: 30%;
-                    background-color: $colorRojo;
-                    border-radius: 31px;
-                    transform: rotate(45deg);
-                    z-index: 0;
-                }
-
-                &--red::before {
-                    content: '';
-                    display: block;
-                    padding-bottom: 100%;
-                }
-
-                &--blue {
-                    left: 23%;
-                    top: -3%;
-                    width: 55%;
-                    background-color: $colorAzul;
-                    border-radius: 9999px;
-                    z-index: 0;
-                }
-
-                &--blue::before {
-                    content: '';
-                    display: block;
-                    padding-bottom: 100%;
-                }
-
-                &__image {
-                    position: inherit;
-                    display: block;
-                }
-
-                &__image--laptop {
-                    transform: rotate(-45deg);
-                    width: 250%;
-                    margin: 0 auto;
-                    top: 60%;
-                    right: -50%;
-                }
-
-                &__image--phone {
-                    width: 140%;
-                    margin: 0 auto;
-                    top: 5%;
-                    left: 0;
-                }
-
+                top: 30%;
+                right: 12%;
+                z-index: 1;
             }
+
+            &__image--phone {
+                width: 80%;
+                position: absolute;
+                top: 10%;
+                left: 19%;
+                z-index: 1;
+            }
+
 
             &__image--megaphone {
                 width: 75%;
@@ -85,12 +49,25 @@ $fondoSeccion: #F7F7F7;
                 top: 20%;
                 left: 5%;
             }
+
+            &__red-shape {
+                width: 50%;
+                position: relative;
+                top: 0;
+                left: 45%;
+            }
+
+            &__blue-shape {
+                width: 60%;
+                position: relative;
+                top: 0;
+                left: 20%;
+            }
+            
         }
 
-        &__picture::before {
-            content: '';
-            display: block;
-            padding-bottom: 50%;
+        &__picture--blue-shape{
+            padding-bottom: 1.5em;
         }
 
         &__picture--solo {
@@ -121,6 +98,8 @@ $fondoSeccion: #F7F7F7;
     &__description--divided {
         padding-bottom: 0;
         margin-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
 
         .information__description__text-zone {
             margin-bottom: 1.2em;
@@ -151,32 +130,6 @@ $fondoSeccion: #F7F7F7;
             &__picture {
                 width: 40%;
                 margin: 0;
-
-                &__shape{
-
-                    &__image--laptop{
-                        width: 275%;
-                        top: 60%;
-                        right: -60%;
-                    }
-
-                    &__image--phone{
-                        width: 125%;
-                        top: 10%;
-                        right: -10%;
-                    }
-                }
-
-                &__shape--red {
-                    right: 10%;
-                    top: 5%;
-                }
-
-                &__shape--blue {
-                    top: -10%;
-                    left: 15%;
-                    width: 60%;
-                }
             }
 
             &__picture--solo {
@@ -226,9 +179,7 @@ $fondoSeccion: #F7F7F7;
 
         &__description--picture-right {
             gap: 0;
-            .information__description__picture {
-                order: 2;
-            }
+            flex-direction: row-reverse;
         }
 
         &__description--divided {
