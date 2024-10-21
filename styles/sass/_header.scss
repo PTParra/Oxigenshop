@@ -1,8 +1,9 @@
 $colorOxigen: #08A6E4;
+$colorLinks: #A5A5A5;
 
 .navbar {
     position: relative;
-    height: 70px;
+    padding: 1em 1.5em;
     background-color: white;
     filter: drop-shadow(0 3px 6px rgba(0, 0, 0, .29));
 
@@ -13,9 +14,6 @@ $colorOxigen: #08A6E4;
         font-size: 2em;
         font-weight: 300;
         color: $colorOxigen;
-        position: absolute;
-        left: 5%;
-        top: 25%;
     }
 
 
@@ -26,8 +24,8 @@ $colorOxigen: #08A6E4;
 
     &__button {
         position: absolute;
-        right: 5%;
-        top: 40%;
+        right: 2.2em;
+        top: 2.1em;
         border: none;
         background-color: transparent;
     }
@@ -35,6 +33,32 @@ $colorOxigen: #08A6E4;
 
     &__links {
         display: none;
+        list-style: none;
+        background-color: white;
+        position: absolute;
+        width: 100%;
+        padding: 0 1.7em;
+        padding-top: 1.2em;
+        padding-bottom: .2em;
+        left: 0;
+        top: 4em;
+        &__link{
+            margin-bottom: 1.1em;
+            &__item{
+                text-decoration: none;
+                color: $colorLinks;
+                letter-spacing: .15em;
+                font-weight: 700;
+                text-transform: uppercase;
+                font-size: .7em;
+                
+            }
+
+            &__item.active {
+                color: black;
+                border-color: $colorOxigen;
+            }
+        }
     }
 }
 
@@ -94,10 +118,12 @@ $colorOxigen: #08A6E4;
         }
 
         &__links {
-            height: 100%;
+            position: static;
+            height: 70px;
             display: flex;
             list-style: none;
             gap: 5em;
+            justify-content: flex-end;
 
             &__link {
                 height: 100%;
