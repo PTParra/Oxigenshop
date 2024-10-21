@@ -261,59 +261,28 @@ p, a, label, button {
   background-color: white;
   border: 1px solid #E8E9ED;
   border-radius: 5px;
-  padding: 1.5em 0;
+  padding: 1.5em 0.5em;
 }
 .information__description__picture {
   width: 90%;
   margin: 0 auto 1.5em auto;
   position: relative;
+  padding-top: 1em;
+  padding-bottom: 3em;
 }
-.information__description__picture__shape {
+.information__description__picture__image--laptop {
+  width: 80%;
   position: absolute;
+  top: 30%;
+  right: 12%;
+  z-index: 1;
 }
-.information__description__picture__shape--red {
-  right: 15%;
-  top: 5%;
-  width: 30%;
-  background-color: #FB3B64;
-  border-radius: 31px;
-  transform: rotate(45deg);
-  z-index: 0;
-}
-.information__description__picture__shape--red::before {
-  content: "";
-  display: block;
-  padding-bottom: 100%;
-}
-.information__description__picture__shape--blue {
-  left: 23%;
-  top: -3%;
-  width: 55%;
-  background-color: #08A6E4;
-  border-radius: 9999px;
-  z-index: 0;
-}
-.information__description__picture__shape--blue::before {
-  content: "";
-  display: block;
-  padding-bottom: 100%;
-}
-.information__description__picture__shape__image {
-  position: inherit;
-  display: block;
-}
-.information__description__picture__shape__image--laptop {
-  transform: rotate(-45deg);
-  width: 250%;
-  margin: 0 auto;
-  top: 60%;
-  right: -50%;
-}
-.information__description__picture__shape__image--phone {
-  width: 140%;
-  margin: 0 auto;
-  top: 5%;
-  left: 0;
+.information__description__picture__image--phone {
+  width: 80%;
+  position: absolute;
+  top: 10%;
+  left: 19%;
+  z-index: 1;
 }
 .information__description__picture__image--megaphone {
   width: 75%;
@@ -322,10 +291,20 @@ p, a, label, button {
   top: 20%;
   left: 5%;
 }
-.information__description__picture::before {
-  content: "";
-  display: block;
-  padding-bottom: 50%;
+.information__description__picture__red-shape {
+  width: 50%;
+  position: relative;
+  top: 0;
+  left: 45%;
+}
+.information__description__picture__blue-shape {
+  width: 60%;
+  position: relative;
+  top: 0;
+  left: 20%;
+}
+.information__description__picture--blue-shape {
+  padding-bottom: 1.5em;
 }
 .information__description__picture--solo {
   position: relative;
@@ -350,6 +329,8 @@ p, a, label, button {
 .information__description--divided {
   padding-bottom: 0;
   margin-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 .information__description--divided .information__description__text-zone {
   margin-bottom: 1.2em;
@@ -376,25 +357,6 @@ p, a, label, button {
   .information__description__picture {
     width: 40%;
     margin: 0;
-  }
-  .information__description__picture__shape__image--laptop {
-    width: 275%;
-    top: 60%;
-    right: -60%;
-  }
-  .information__description__picture__shape__image--phone {
-    width: 125%;
-    top: 10%;
-    right: -10%;
-  }
-  .information__description__picture__shape--red {
-    right: 10%;
-    top: 5%;
-  }
-  .information__description__picture__shape--blue {
-    top: -10%;
-    left: 15%;
-    width: 60%;
   }
   .information__description__picture--solo {
     position: relative;
@@ -433,9 +395,7 @@ p, a, label, button {
   }
   .information__description--picture-right {
     gap: 0;
-  }
-  .information__description--picture-right .information__description__picture {
-    order: 2;
+    flex-direction: row-reverse;
   }
   .information__description--divided {
     background-color: transparent;
