@@ -1,0 +1,15 @@
+$colorOxigen: #08a6e4;
+
+.return-to-top-button{
+    display: none;
+    padding: .25em .7em;
+    font-size: 1.6em;
+    border: 1px solid $colorOxigen;
+    background-color: white;
+    border-radius: 9999px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 8.5%;
+    right: 10%;
+    z-index: 1;
+}
