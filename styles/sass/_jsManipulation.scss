@@ -1,0 +1,15 @@
+$colorOxigen: #08a6e4;
+
+.percentage-scroll {
+    width: 100%;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.percentage-scroll__bar{
+    padding-bottom: .3em;
+    background-color: $colorOxigen;
+    width: 0;
+}

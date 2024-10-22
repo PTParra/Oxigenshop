@@ -6,17 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
     <title>OXIGENShop</title>
-    <script src="./scripts/main.js" defer></script>
+    <script src="scripts/menuHamburguesa.js"></script>
+    <script src="scripts/barraPorcentaje.js"></script>
+    <script src="scripts/main.js" defer></script>
 </head>
 
 <body>
+    <div class="percentage-scroll">
+        <div class="percentage-scroll__bar" id="barra-porcentaje"></div>
+    </div>
     <header class="header">
         <nav class="navbar">
             <h1 class="navbar__title">OXYGENShop</h1>
             <button class="navbar__button" id="menu-hamburguesa">
                 <img src="./assets/icons/Menu.png" alt="">
             </button>
-            <ul class="navbar__links">
+            <ul class="navbar__links" id="enlaces-header">
                 <li class="navbar__links__link">
                     <a href="#" class="navbar__links__link__item active">
                         <p class="navbar__links__link__item__text">Why Us</p>
@@ -267,7 +272,6 @@
             <button class="contact__form__submit-button" type="submit">Send</button>
         </form>
     </section>
-
     <footer class="footer">
         <div class="footer__interior">
             <div class="footer__interior__owner">
