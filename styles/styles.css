@@ -674,23 +674,23 @@ p, a, label, button {
   cursor: pointer;
 }
 .contact__form__label--uppercase {
-  font-size: 0.7em;
+  font-size: 0.7rem;
   font-weight: 600;
   color: #08A6E4;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.2rem;
   display: block;
-  margin-bottom: 0.6em;
+  margin-bottom: 0.6rem;
 }
 .contact__form__submit-button {
   margin-left: auto;
   display: block;
-  padding: 1.3em 7em;
+  padding: 1.3rem 7rem;
   background-color: #08A6E4;
   color: white;
   border: none;
   border-radius: 35px;
-  font-size: 0.812em;
+  font-size: 0.812rem;
   filter: drop-shadow(5px 10px 14px rgba(7, 172, 230, 0.2901960784));
 }
 .contact__form__submit-button:hover {
@@ -699,6 +699,12 @@ p, a, label, button {
 .contact__form__error {
   color: red;
   letter-spacing: 0.01em;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.contact__form__error--checkbox {
+  margin-bottom: 1rem;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -799,6 +805,10 @@ p, a, label, button {
   padding-bottom: 0.3em;
   background-color: #08a6e4;
   width: 0;
+}
+
+.error-in-input {
+  border: 2px solid red;
 }
 
 .return-to-top-button {

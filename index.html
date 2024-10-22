@@ -9,6 +9,7 @@
     <script src="scripts/menuHamburguesa.js"></script>
     <script src="scripts/barraPorcentaje.js"></script>
     <script src="scripts/botonScrollUp.js"></script>
+    <script src="scripts/validacionFormulario.js"></script>
     <script src="scripts/main.js" defer></script>
 </head>
 
@@ -256,11 +257,18 @@
                 </div>
             </div>
         </article>
-        <form class="contact__form" action="">
-            <label class="contact__form__label contact__form__label--uppercase" for="name">Name</label>
+        <form class="contact__form" id="formulario-contacto" method="post" >
+            <label class="contact__form__label contact__form__label--uppercase" for="name">
+                Name
+                <span class="contact__form__error" id="error-name"></span>
+            </label>
             <input class="contact__form__text-input" type="text" name="name" id="name">
-            <label class="contact__form__label contact__form__label--uppercase" for="email">Email</label>
+            <label class="contact__form__label contact__form__label--uppercase" for="email">
+                Email 
+                <span class="contact__form__error" id="error-email"></span>
+            </label>
             <input class="contact__form__text-input" type="text" name="email" id="email">
+            <p class="contact__form__error contact__form__error--checkbox" id="error-consent"></p>
             <label class="contact__form__consent">
                 <input class="contact__form__consent__checkbox" type="checkbox" name="consent" id="consent">
                 <span class="contact__form__consent__custom-checkbox"></span>
