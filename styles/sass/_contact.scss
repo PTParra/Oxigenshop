@@ -122,6 +122,11 @@
         &__submit-button:hover{
             cursor: pointer;
         }
+
+        &__error{
+            color: red;
+            letter-spacing: 0.01em;
+        }
     }
 
     
