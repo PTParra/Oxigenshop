@@ -98,24 +98,24 @@
 
 
         &__label--uppercase{
-            font-size: .7em;
+            font-size: .7rem;
             font-weight: 600;
             color: #08A6E4;
             text-transform: uppercase;
-            letter-spacing: .2em;
+            letter-spacing: .2rem;
             display: block;
-            margin-bottom: .6em;
+            margin-bottom: .6rem;
         }
 
         &__submit-button{
             margin-left: auto;
             display: block;
-            padding: 1.3em 7em;
+            padding: 1.3rem 7rem;
             background-color: #08A6E4;
             color: white;
             border: none;
             border-radius: 35px;
-            font-size: .812em;
+            font-size: .812rem;
             filter: drop-shadow(5px 10px 14px #07ACE64A);
         }
 
@@ -126,6 +126,12 @@
         &__error{
             color: red;
             letter-spacing: 0.01em;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            &--checkbox{
+                margin-bottom: 1rem;
+            }
         }
     }
 
