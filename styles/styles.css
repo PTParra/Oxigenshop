@@ -139,9 +139,9 @@ p, a, label, button {
   }
   .navbar__links {
     position: static;
+    padding: 0;
     height: 70px;
     display: flex;
-    list-style: none;
     gap: 5em;
     justify-content: flex-end;
   }
