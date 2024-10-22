@@ -782,4 +782,17 @@ p, a, label, button {
     width: 85%;
     margin: 0 auto;
   }
+}
+.percentage-scroll {
+  width: 100%;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.percentage-scroll__bar {
+  padding-bottom: 0.3em;
+  background-color: #08a6e4;
+  width: 0;
 }/*# sourceMappingURL=styles.css.map */

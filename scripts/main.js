@@ -1,11 +1,3 @@
-const mostrarOcultarMenuHamburguesa = () => {
+const menuHamburguesa = new MenuHamburguesa('menu-hamburguesa', 'enlaces-header');
 
-    const links = document.querySelector('.navbar__links');
-
-
-    links.style.display = links.checkVisibility() ? "none" : "block";
-}
-
-const botonMenu = document.getElementById('menu-hamburguesa');
-
-botonMenu.addEventListener("click", mostrarOcultarMenuHamburguesa);
+const barraPorcentaje = new BarraPorcentaje('barra-porcentaje');
