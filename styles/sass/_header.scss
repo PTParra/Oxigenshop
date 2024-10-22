@@ -119,9 +119,9 @@ $colorLinks: #A5A5A5;
 
         &__links {
             position: static;
+            padding: 0;
             height: 70px;
             display: flex;
-            list-style: none;
             gap: 5em;
             justify-content: flex-end;
 
