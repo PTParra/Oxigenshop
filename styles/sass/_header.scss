@@ -62,6 +62,10 @@ $colorLinks: #A5A5A5;
     }
 }
 
+.links-active{
+    display: block;
+}
+
 .front {
     padding-top: 4em;
 
@@ -159,6 +163,9 @@ $colorLinks: #A5A5A5;
         }
     }
 
+    .links-active{
+        display: flex;
+    }
 
     .front {
         padding-top: 8.1em;

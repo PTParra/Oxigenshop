@@ -23,6 +23,11 @@ class BotonScrollUp{
         let porcentajeAltura = (posicionVentana * 100) / (alturaPagina - alturaVentana);
         porcentajeAltura = porcentajeAltura > 100 ? 100 : porcentajeAltura;
         
-        this.boton.style.display = porcentajeAltura > 60 ? "block" : "none";
+        if(porcentajeAltura > 60){
+            this.boton.classList.add('show-button');
+        }
+        else{
+            this.boton.classList.remove('show-button');
+        }
     }
 }
