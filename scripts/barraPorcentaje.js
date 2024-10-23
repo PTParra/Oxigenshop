@@ -1,7 +1,6 @@
 class BarraPorcentaje{
     constructor(contenedor){
         this.contenedor = document.getElementById(contenedor);
-        this.inicializar();
     }
 
     inicializar() {
