@@ -455,7 +455,7 @@ p, a, label, button {
   font-size: 2.2em;
   font-weight: 400;
   text-align: center;
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
 }
 .pricing__prices .price {
   position: relative;
@@ -535,6 +535,21 @@ p, a, label, button {
 .pricing__prices .price--premium .price__type .price__type__price {
   color: #55DFB4;
 }
+.pricing__price-selector {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 3em;
+  text-align: right;
+}
+.pricing__price-selector__options {
+  border: 1.5px solid #afafaf;
+  background-color: #08A6E4;
+  color: #ececec;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.4rem 0;
+}
 
 @media only screen and (min-width: 1000px) {
   .pricing {
@@ -587,6 +602,9 @@ p, a, label, button {
   }
   .pricing__prices .price--premium:hover {
     box-shadow: 5px 10px 27px rgba(85, 223, 180, 0.2901960784);
+  }
+  .pricing__price-selector {
+    width: 82.5%;
   }
 }
 .contact {
