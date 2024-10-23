@@ -2,7 +2,6 @@ class BotonScrollUp{
     constructor(boton, milisegundos){
         this.boton = document.getElementById(boton);
         this.milisegundos = milisegundos;
-        this.inicializar();
     }
 
     inicializar(){

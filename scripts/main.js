@@ -1,10 +1,18 @@
 const menuHamburguesa = new MenuHamburguesa('menu-hamburguesa', 'enlaces-header');
 
+menuHamburguesa.inicializar();
+
 const barraPorcentaje = new BarraPorcentaje('barra-porcentaje');
+
+barraPorcentaje.inicializar();
 
 const botonScrollUp = new BotonScrollUp('volver-arriba', 200);
 
+botonScrollUp.inicializar();
+
 const validacionFormulario = new ValidacionFormulario('formulario-contacto');
+
+validacionFormulario.inicializar();
 
 const precios = [
     new ConversorPrecio(0, 'precio-basic'), 

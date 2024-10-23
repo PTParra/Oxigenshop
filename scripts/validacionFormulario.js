@@ -44,7 +44,6 @@ class Formulario {
 class ValidacionFormulario extends Formulario{
     constructor(formulario) {
         super(formulario);
-        this.inicializar();
     }
 
     inicializar() {
