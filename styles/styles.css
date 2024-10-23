@@ -829,7 +829,7 @@ p, a, label, button {
 }
 
 .error-in-input {
-  border: 2px solid red;
+  border-color: red;
 }
 
 .return-to-top-button {

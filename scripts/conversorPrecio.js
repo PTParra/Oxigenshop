@@ -4,9 +4,9 @@ class Precio{
     }
 }
 
-class ConversorPrecio extends Precio{
+class ConversorPrecio{
     constructor(precio, campoPrecio){
-        super(precio);
+        this.precio = new Precio(precio);
         this.campoPrecio = document.getElementById(campoPrecio);
         this.nuevoPrecio = 0;
     }
@@ -17,10 +17,10 @@ class ConversorPrecio extends Precio{
         const conversiones = await this.devolverConversiones();
 
         if(nuevaMoneda === "eur"){
-            this.nuevoPrecio = this.precio;
+            this.nuevoPrecio = this.precio.precio;
             this.modificarPrecioDOM(this.nuevoPrecio + "€");
         }else{
-            this.nuevoPrecio = Math.floor(this.precio * conversiones[nuevaMoneda]);
+            this.nuevoPrecio = Math.floor(this.precio.precio * conversiones[nuevaMoneda]);
             let salida;
             switch (nuevaMoneda) {
                 case "usd":
