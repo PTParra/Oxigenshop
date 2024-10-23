@@ -2,6 +2,42 @@ class Formulario {
     constructor(formulario) {
         this.formulario = document.getElementById(formulario);
     }
+
+    async sendValues(){
+        let formData = new FormData(this.formulario);
+
+        formData = Object.fromEntries(formData);
+
+        let resultado = await this.valuesToServer(formData);
+
+        if(resultado){
+            console.log(resultado);
+            console.log("DATOS ENVIADOS!");
+
+            //Una vez que este terminado y funcionando todo, this.formulario.submit(); se puede descomentar
+            //this.formulario.submit();
+        }
+    }
+
+    async valuesToServer(data) {
+        let url = 'https://jsonplaceholder.typicode.com/posts';
+        console.log(data);
+        try {
+            const response = await fetch(url, {
+                method: 'POST',
+                body: JSON.stringify(data),
+                headers: {
+                    'Content-type': 'application/json; charset=UTF-8',
+                },
+            })
+            if (response.ok) {
+                const json = await response.json()
+                return json;
+            }
+        } catch (error) {
+            throw Error('Han ocurrido errores: ' + error);
+        }
+    }
 }
 
 
@@ -27,9 +63,9 @@ class ValidacionFormulario extends Formulario{
             throw Error("Ha habido errores en la introduccion de datos...");
         }
 
-        this.formulario.submit();
+        
 
-        console.log(campoNombre);
+        this.sendValues();
     }
 
     quitarErrorAlInteractuar(campo) {
