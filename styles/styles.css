@@ -89,6 +89,10 @@ p, a, label, button {
   border-color: #08A6E4;
 }
 
+.links-active {
+  display: block;
+}
+
 .front {
   padding-top: 4em;
 }
@@ -171,6 +175,9 @@ p, a, label, button {
   .navbar__links__link__item.active {
     color: black;
     border-color: #08A6E4;
+  }
+  .links-active {
+    display: flex;
   }
   .front {
     padding-top: 8.1em;
@@ -811,15 +818,11 @@ p, a, label, button {
     margin: 0 auto;
   }
 }
-.percentage-scroll {
-  width: 100%;
+.percentage-scroll__bar {
   z-index: 2;
   position: fixed;
   top: 0;
   left: 0;
-}
-
-.percentage-scroll__bar {
   padding-bottom: 0.3em;
   background-color: #08a6e4;
   width: 0;
@@ -841,4 +844,8 @@ p, a, label, button {
   bottom: 8.5%;
   right: 10%;
   z-index: 1;
+}
+
+.show-button {
+  display: block;
 }/*# sourceMappingURL=styles.css.map */

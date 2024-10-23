@@ -10,6 +10,6 @@ class MenuHamburguesa {
     }
 
     mostrarOcultarMenu(){
-        this.listaLinks.style.display = this.listaLinks.checkVisibility() ? "none" : "block";
+        this.listaLinks.classList.toggle('links-active');
     }
 }
