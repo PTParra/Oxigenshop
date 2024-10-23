@@ -1,6 +1,6 @@
 class Formulario {
-    constructor(formulario) {
-        this.formulario = document.getElementById(formulario);
+    constructor(idFormulario) {
+        this.formulario = document.getElementById(idFormulario);
     }
 
     async sendValues(){
@@ -41,14 +41,14 @@ class Formulario {
 }
 
 
-class ValidacionFormulario extends Formulario{
+class ValidacionFormulario{
     constructor(formulario) {
-        super(formulario);
+        this.formulario = new Formulario(formulario)
     }
 
     inicializar() {
-        this.formulario.addEventListener("submit", (event) => this.controlarErrores(event));
-        this.formulario.querySelectorAll('input').forEach((element) => { this.quitarErrorAlInteractuar(element) })
+        this.formulario.formulario.addEventListener("submit", (event) => this.controlarErrores(event));
+        this.formulario.formulario.querySelectorAll('input').forEach((element) => { this.quitarErrorAlInteractuar(element) })
     }
 
     controlarErrores(event) {
@@ -64,7 +64,7 @@ class ValidacionFormulario extends Formulario{
 
         
 
-        this.sendValues();
+        this.formulario.sendValues();
     }
 
     quitarErrorAlInteractuar(campo) {
@@ -80,7 +80,7 @@ class ValidacionFormulario extends Formulario{
     }
 
     errorNombre() {
-        const campoNombre = this.formulario.querySelector('#name');
+        const campoNombre = this.formulario.formulario.querySelector('#name');
         let valorNombre = campoNombre.value;
 
         if (valorNombre.length < 2 || valorNombre.length > 100) {
@@ -93,7 +93,7 @@ class ValidacionFormulario extends Formulario{
     errorEmail() {
         const validacionEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-        const campoEmail = this.formulario.querySelector('#email');
+        const campoEmail = this.formulario.formulario.querySelector('#email');
         let valorEmail = campoEmail.value;
 
         if (valorEmail.length <= 0 || !validacionEmail.test(valorEmail)) {
@@ -104,7 +104,7 @@ class ValidacionFormulario extends Formulario{
     }
 
     errorCheckbox() {
-        const campoEmail = this.formulario.querySelector('#consent');
+        const campoEmail = this.formulario.formulario.querySelector('#consent');
         let valorEmail = campoEmail.checked;
 
         if (!valorEmail) {
