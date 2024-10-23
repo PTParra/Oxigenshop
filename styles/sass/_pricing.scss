@@ -1,14 +1,18 @@
+$colorBasic: #EB476E;
+$colorProfesional: #07ACE6;
+$colorPremium: #55DFB4;
+$colorBordeSelect: #afafaf;
+$colorOxigen: #08A6E4;
+
 .pricing{
     padding-top: 3em;
     &__title{
         font-size: 2.2em;
         font-weight: 400;
         text-align: center;
-        margin-bottom: .5em;
+        margin-bottom: 1em;
     }
-    $colorBasic: #EB476E;
-    $colorProfesional: #07ACE6;
-    $colorPremium: #55DFB4;
+    
     
     &__prices{
 
@@ -113,6 +117,23 @@
             }
         }
     }
+
+    &__price-selector{
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 3em;
+        text-align: right;
+        
+        &__options{
+            border: 1.5px solid $colorBordeSelect;
+            background-color: $colorOxigen;
+            color: #ececec;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: .4rem 0;
+        }
+    }
 }
 
 @media only screen and (min-width: 1000px) {
@@ -174,6 +195,10 @@
             .price--premium:hover{
                 box-shadow: (5px 10px 27px #55DFB44A);
             }
+        }
+
+        &__price-selector{
+            width: 82.5%;
         }
     }
 }

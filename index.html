@@ -10,6 +10,7 @@
     <script src="scripts/barraPorcentaje.js"></script>
     <script src="scripts/botonScrollUp.js"></script>
     <script src="scripts/validacionFormulario.js"></script>
+    <script src="scripts/conversorPrecio.js"></script>
     <script src="scripts/main.js" defer></script>
 </head>
 
@@ -140,11 +141,19 @@
     </section>
     <section class="pricing">
         <h3 class="pricing__title">Pricing</h3>
+        <div class="pricing__price-selector">
+            <select class="pricing__price-selector__options" name="selector-precio" id="selector-precio">
+                <option class="pricing__price-selector__options__option" value="eur">Euros</option>
+                <option class="pricing__price-selector__options__option" value="usd">Dólares</option>
+                <option class="pricing__price-selector__options__option" value="gbp">Libras</option>
+            </select>
+        </div>
+        
         <div class="pricing__prices">
             <article class="price price--basic">
                 <div class="price__type">
                     <h3 class="price__type__title">Basic</h3>
-                    <p class="price__type__price">$0</p>
+                    <p class="price__type__price" id="precio-basic">0€</p>
                 </div>
 
                 <ul class="price__perks">
@@ -176,7 +185,7 @@
             <article class="price price--professional">
                 <div class="price__type">
                     <h3 class="price__type__title">Professional</h3>
-                    <p class="price__type__price">$25</p>
+                    <p class="price__type__price" id="precio-professional">25€</p>
                     <h4 class="price__type__subtitle">Limited offer</h4>
                 </div>
 
@@ -210,7 +219,7 @@
             <article class="price price--premium">
                 <div class="price__type">
                     <h3 class="price__type__title">Premium</h3>
-                    <p class="price__type__price">$60</p>
+                    <p class="price__type__price" id="precio-premium">60€</p>
                     <h4 class="price__type__subtitle">Limited offer</h4>
                 </div>
 
