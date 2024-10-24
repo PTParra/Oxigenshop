@@ -945,4 +945,66 @@ p, a, label, button {
   .mostrarPopup {
     display: flex;
   }
+}
+.slider {
+  position: relative;
+  background-color: black;
+  padding: 3em 0;
+  margin: 4em auto;
+  width: 100%;
+}
+.slider__image {
+  display: none;
+  width: 100%;
+}
+.slider__change-button {
+  font-size: 1.5rem;
+  color: #C4C4C4;
+  background-color: rgba(0, 0, 0, 0.5882352941);
+  border: 3px solid #C4C4C4;
+  border-radius: 9999px;
+  padding: 0.4rem 1rem;
+  position: absolute;
+  top: 42%;
+  cursor: pointer;
+}
+.slider__change-button--right {
+  right: 2%;
+}
+.slider__change-button--left {
+  left: 2%;
+}
+.slider__jump-to-image-buttons {
+  width: 100%;
+  position: absolute;
+  bottom: 2.5%;
+  text-align: center;
+}
+.slider__jump-to-image-buttons__button {
+  display: inline-block;
+  margin-right: 0.6rem;
+  padding: 0.15rem;
+  border-radius: 9999px;
+  background-color: #C4C4C4;
+  border-color: transparent;
+  cursor: pointer;
+}
+.slider__jump-to-image-buttons__button--active {
+  background-color: white;
+}
+
+.mostrada {
+  display: block;
+}
+
+@media only screen and (min-width: 1000px) {
+  .slider {
+    width: 60%;
+    padding: 4em 0;
+  }
+  .slider__change-button {
+    font-size: 2rem;
+    padding: 0.2rem 1rem;
+    top: 47%;
+  }
 }/*# sourceMappingURL=styles.css.map */
