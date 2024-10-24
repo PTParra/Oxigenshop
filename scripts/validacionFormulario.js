@@ -51,21 +51,7 @@ class ValidacionFormulario{
         this.formulario.formulario.querySelectorAll('input').forEach((element) => { this.quitarErrorAlInteractuar(element) })
     }
 
-    controlarErrores(event) {
-        event.preventDefault();
-
-        let errorNombre = this.errorNombre('name');
-        let errorEmail = this.errorEmail('email');
-        let errorCheckbox = this.errorCheckbox('consent');
-
-        if (errorNombre || errorEmail || errorCheckbox) {
-            throw Error("Ha habido errores en la introduccion de datos...");
-        }
-
-        
-
-        this.formulario.sendValues();
-    }
+    controlarErrores(event) {}
 
     quitarErrorAlInteractuar(campo) {
         campo.addEventListener('input', () => {
@@ -120,6 +106,28 @@ class ValidacionFormulario{
         const campoConError = document.querySelector(campoInputRemarcar);
         campoConError.classList.add('error-in-input');
         console.log(new Error(descripcionError));
+    }
+}
+
+class ValidacionFormularioContacto extends ValidacionFormulario{
+    constructor(formulario) {
+        super(formulario);
+    }
+
+    controlarErrores(event){
+        event.preventDefault();
+
+        let errorNombre = this.errorNombre('name');
+        let errorEmail = this.errorEmail('email');
+        let errorCheckbox = this.errorCheckbox('consent');
+
+        if (errorNombre || errorEmail || errorCheckbox) {
+            throw Error("Ha habido errores en la introduccion de datos...");
+        }
+
+        
+
+        this.formulario.sendValues();
     }
 }
 

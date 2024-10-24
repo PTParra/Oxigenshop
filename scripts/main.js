@@ -10,7 +10,7 @@ const botonScrollUp = new BotonScrollUp('volver-arriba', 200);
 
 botonScrollUp.inicializar();
 
-const validacionFormulario = new ValidacionFormulario('formulario-contacto');
+const validacionFormulario = new ValidacionFormularioContacto('formulario-contacto');
 
 validacionFormulario.inicializar();
 
