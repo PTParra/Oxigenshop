@@ -14,8 +14,8 @@ class Formulario {
             console.log(resultado);
             console.log("DATOS ENVIADOS!");
 
-            //Una vez que este terminado y funcionando todo, this.formulario.submit(); se puede descomentar
-            //this.formulario.submit();
+            
+            this.formulario.submit();
         }
     }
 
@@ -54,9 +54,9 @@ class ValidacionFormulario{
     controlarErrores(event) {
         event.preventDefault();
 
-        let errorNombre = this.errorNombre();
-        let errorEmail = this.errorEmail();
-        let errorCheckbox = this.errorCheckbox();
+        let errorNombre = this.errorNombre('name');
+        let errorEmail = this.errorEmail('email');
+        let errorCheckbox = this.errorCheckbox('consent');
 
         if (errorNombre || errorEmail || errorCheckbox) {
             throw Error("Ha habido errores en la introduccion de datos...");
@@ -79,36 +79,36 @@ class ValidacionFormulario{
         });
     }
 
-    errorNombre() {
-        const campoNombre = this.formulario.formulario.querySelector('#name');
+    errorNombre(idCampoNombre) {
+        const campoNombre = this.formulario.formulario.querySelector('#' + idCampoNombre);
         let valorNombre = campoNombre.value;
 
         if (valorNombre.length < 2 || valorNombre.length > 100) {
-            this.mostrarError("error-name", "Debe ser entre 2 y 100 caracteres", "#name");
+            this.mostrarError("error-" + idCampoNombre, "Debe ser entre 2 y 100 caracteres", "#" + idCampoNombre);
             return true;
         }
         return false;
     }
 
-    errorEmail() {
+    errorEmail(idCampoEmail) {
         const validacionEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-        const campoEmail = this.formulario.formulario.querySelector('#email');
+        const campoEmail = this.formulario.formulario.querySelector('#' + idCampoEmail);
         let valorEmail = campoEmail.value;
 
         if (valorEmail.length <= 0 || !validacionEmail.test(valorEmail)) {
-            this.mostrarError("error-email", "Debe ser un correo válido", "#email");
+            this.mostrarError("error-" + idCampoEmail, "Debe ser un correo válido", "#" + idCampoEmail);
             return true;
         }
         return false;
     }
 
-    errorCheckbox() {
-        const campoEmail = this.formulario.formulario.querySelector('#consent');
+    errorCheckbox(idCampoCheckbox) {
+        const campoEmail = this.formulario.formulario.querySelector('#' + idCampoCheckbox);
         let valorEmail = campoEmail.checked;
 
         if (!valorEmail) {
-            this.mostrarError("error-consent", "Debes aceptar los terminos y condiciones", "#custom-checkbox-consent");
+            this.mostrarError("error-" + idCampoCheckbox, "Debes aceptar los terminos y condiciones", "#custom-checkbox-" + idCampoCheckbox);
             return true;
         }
         return false;
@@ -120,5 +120,23 @@ class ValidacionFormulario{
         const campoConError = document.querySelector(campoInputRemarcar);
         campoConError.classList.add('error-in-input');
         console.log(new Error(descripcionError));
+    }
+}
+
+class ValidacionFormularioPopup extends ValidacionFormulario{
+    constructor(formulario) {
+        super(formulario);
+    }
+
+    controlarErrores(event) {
+        event.preventDefault();
+
+        if (this.errorEmail('email-popup')) {
+            throw Error("Ha habido errores en la introduccion de datos...");
+        }
+
+        localStorage.setItem("popup", "quitado");
+
+        this.formulario.sendValues();
     }
 }
