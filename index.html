@@ -11,11 +11,31 @@
     <script src="scripts/botonScrollUp.js"></script>
     <script src="scripts/validacionFormulario.js"></script>
     <script src="scripts/conversorPrecio.js"></script>
+    <script src="scripts/popupForm.js"></script>
     <script src="scripts/main.js" defer></script>
 </head>
 
 <body>
     <div class="percentage-scroll__bar" id="barra-porcentaje"></div>
+
+    <div class="popup" id="popup-subscribe">
+        <form class="popup__form" id="formulario-popup" method="post">
+            <button class="popup__form__button-close-container" type="button">
+                <img class="popup__form__button-close-container__image" src="./assets/icons/closeMenu.png" alt="">
+            </button>
+            <h2 class="popup__form__title">Subscribe to our newsletter</h2>
+            <p class="popup__form__subtitle">Subscribe to our newsletter and be the first to know about exciting updates, 
+                exclusive content, and special offers. Don't miss out—join our community today!</p>
+            <label class="contact__form__label contact__form__label--uppercase" for="email-popup">
+                Email
+                <span class="contact__form__error" id="error-email-popup"></span>
+            </label>
+            <input class="contact__form__text-input" type="text" name="email-popup" id="email-popup">
+            <button class="contact__form__submit-button popup__form__submit" type="submit">Enviar</button>
+        </form>
+        <button class="popup__form__invisible-button" id="background-close-button"></button>
+    </div>
+
     <header class="header">
         <nav class="navbar">
             <h1 class="navbar__title">OXYGENShop</h1>
@@ -63,8 +83,7 @@
                 <div class="number__icon">
                     <div class="number__icon__circle
                      number__icon__circle--red"></div>
-                    <img class="number__icon__image number__icon__image--person"
-                        src="./assets/icons/person.png" alt="">
+                    <img class="number__icon__image number__icon__image--person" src="./assets/icons/person.png" alt="">
                 </div>
                 <h3 class="number__title">100000+</h3>
                 <h4 class="number__subtitle">daily entries</h4>
@@ -73,8 +92,7 @@
                 <div class="number__icon">
                     <div class="number__icon__circle
                      number__icon__circle--blue"></div>
-                    <img class="number__icon__image number__icon__image--eye"
-                        src="./assets/icons/eye.png" alt="">
+                    <img class="number__icon__image number__icon__image--eye" src="./assets/icons/eye.png" alt="">
                 </div>
                 <h3 class="number__title">2000000+</h3>
                 <h4 class="number__subtitle">seen products every day</h4>
@@ -83,8 +101,7 @@
                 <div class="number__icon">
                     <div class="number__icon__circle
                      number__icon__circle--green"></div>
-                    <img class="number__icon__image number__icon__image--posts"
-                        src="./assets/icons/posts.png" alt="">
+                    <img class="number__icon__image number__icon__image--posts" src="./assets/icons/posts.png" alt="">
                 </div>
                 <h3 class="number__title">10000+</h3>
                 <h4 class="number__subtitle">added posts daily</h4>
@@ -97,7 +114,8 @@
             <div class="information__description__picture">
                 <img class="information__description__picture__image
                 information__description__picture__image--laptop" src="./assets/images/Macbook2.png" alt="">
-                <img class="information__description__picture__red-shape" src="./assets/images/roundedRedRectangle.png" alt="">
+                <img class="information__description__picture__red-shape" src="./assets/images/roundedRedRectangle.png"
+                    alt="">
             </div>
 
             <div class="information__description__text-zone">
@@ -105,7 +123,8 @@
                 <p class="information__description__text-zone__text">Lorem ipsum dolor sit amet, consectetur adipiscing
                     elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                 </p>
-                <div class="information__description__text-zone__line information__description__text-zone__line--red"></div>
+                <div class="information__description__text-zone__line information__description__text-zone__line--red">
+                </div>
             </div>
         </article>
         <article class="information__description">
@@ -119,7 +138,8 @@
                 <p class="information__description__text-zone__text">Lorem ipsum dolor sit amet, consectetur adipiscing
                     elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                 </p>
-                <div class="information__description__text-zone__line information__description__text-zone__line--blue"></div>
+                <div class="information__description__text-zone__line information__description__text-zone__line--blue">
+                </div>
             </div>
         </article>
         <article class="information__description information__description--divided">
@@ -128,7 +148,8 @@
                 <p class="information__description__text-zone__text">Lorem ipsum dolor sit amet, consectetur adipiscing
                     elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                 </p>
-                <div class="information__description__text-zone__line information__description__text-zone__line--green"></div>
+                <div class="information__description__text-zone__line information__description__text-zone__line--green">
+                </div>
             </div>
 
             <div class="information__description_picture information__description__picture--solo">
@@ -146,7 +167,7 @@
                 <option class="pricing__price-selector__options__option" value="gbp">Libras</option>
             </select>
         </div>
-        
+
         <div class="pricing__prices">
             <article class="price price--basic">
                 <div class="price__type">
@@ -255,23 +276,26 @@
             <p class="contact__info__subtitle">Leave your email address or call us!</p>
             <div class="contact__info__types-container">
                 <div class="contact__info__types-container__type">
-                    <img src="./assets/icons/mail.png" alt="" class="contact__info__types-container__type__description-img">
-                    <a href="mailto:info@bestshop.xyz" class="contact__info__types-container__type__contact">info@bestshop.xyz</a>
+                    <img src="./assets/icons/mail.png" alt=""
+                        class="contact__info__types-container__type__description-img">
+                    <a href="mailto:info@bestshop.xyz"
+                        class="contact__info__types-container__type__contact">info@bestshop.xyz</a>
                 </div>
                 <div class="contact__info__types-container__type">
-                    <img src="./assets/icons/phone.png" alt="" class="contact__info__types-container__type__description-img">
+                    <img src="./assets/icons/phone.png" alt=""
+                        class="contact__info__types-container__type__description-img">
                     <a href="tel:+34123456789" class="contact__info__types-container__type__contact">123 456 789</a>
                 </div>
             </div>
         </article>
-        <form class="contact__form" id="formulario-contacto" method="post" >
+        <form class="contact__form" id="formulario-contacto" method="post">
             <label class="contact__form__label contact__form__label--uppercase" for="name">
                 Name
                 <span class="contact__form__error" id="error-name"></span>
             </label>
             <input class="contact__form__text-input" type="text" name="name" id="name">
             <label class="contact__form__label contact__form__label--uppercase" for="email">
-                Email 
+                Email
                 <span class="contact__form__error" id="error-email"></span>
             </label>
             <input class="contact__form__text-input" type="text" name="email" id="email">
@@ -279,9 +303,12 @@
             <label class="contact__form__consent">
                 <input class="contact__form__consent__checkbox" type="checkbox" name="consent" id="consent">
                 <span id="custom-checkbox-consent" class="contact__form__consent__custom-checkbox"></span>
-                <p class="contact__form__consent__label">I hereby give consent for my personal data included in my application to be processed
-                    for the purposes of the recruitment process under the European Parliament’s and Council of the European
-                    Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing
+                <p class="contact__form__consent__label">I hereby give consent for my personal data included in my
+                    application to be processed
+                    for the purposes of the recruitment process under the European Parliament’s and Council of the
+                    European
+                    Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the
+                    processing
                     of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data
                     Protection Directive)</p>
             </label>

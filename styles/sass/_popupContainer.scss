@@ -1,0 +1,110 @@
+$colorOxigen: #08a6e4;
+
+.popup{
+    display: none;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #00000038;
+    &__form{
+        padding: 2.5em 1em;
+        text-align: center;
+        width: 85%;
+        position: absolute;
+        top: 27%;
+        left: 8%;
+        background-color: white;
+        border-radius: 30px;
+        border: 2.5px solid $colorOxigen;
+        z-index: 2;
+        &__title{
+            font-size: 1.7rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+
+        &__subtitle{
+            font-size: .95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        &__submit{
+            padding-left: 4rem;
+            padding-right: 4rem;
+        }
+
+        &__button-close-container{
+            border: none;
+            background-color: transparent;
+            position: absolute;
+            top: 4%;
+            right: 4%;
+            cursor: pointer;
+            padding: .2rem;
+            &__image{
+                width: 20px;
+            }
+        }
+        &__invisible-button{
+            background-color: transparent;
+            border: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    
+}
+
+.mostrarPopup{
+    display: block;
+}
+
+@media only screen and (min-width: 1000px){
+    .popup{
+        justify-content: center;
+        align-items: center;
+        &__form{
+            padding: 1.5em 1em;
+            text-align: center;
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 40%;
+            background-color: white;
+            border-radius: 30px;
+    
+            &__title{
+                font-size: 2.3rem;
+                margin-bottom: 2rem;
+            }
+    
+            &__subtitle{
+                font-size: 1rem;
+                margin-bottom: 2rem;
+            }
+    
+            &__submit{
+                padding-left: 4rem;
+                padding-right: 4rem;
+            }
+
+            &__button-close-container{
+                top: 6%;
+                right: 3%;
+            }
+        }
+    
+        
+    }
+
+    .mostrarPopup{
+        display: flex;
+    }
+}

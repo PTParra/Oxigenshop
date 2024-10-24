@@ -29,3 +29,11 @@ inputSeleccionarPrecio.addEventListener('input', () => {
         precio.cambiarNuevoPrecio(nuevaMoneda);
     });
 })
+
+const validacionFormularioPopup = new ValidacionFormularioPopup('formulario-popup');
+
+validacionFormularioPopup.inicializar();
+
+const popupFormulario = new PopupFormulario('popup-subscribe', 'background-close-button', 5000);
+
+popupFormulario.inicializar();
