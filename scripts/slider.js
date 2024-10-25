@@ -3,7 +3,6 @@ class Slider{
         this.slider = document.getElementById(idSlider);
         this.imagenes = Array.from(this.slider.querySelectorAll('img'));
         this.seleccionada = 0;
-        console.log(this.imagenes);
     }
 
     inicializar(){
@@ -24,7 +23,6 @@ class Slider{
     }
 
     cambiarImagen(){
-        console.log(this.seleccionada);
         this.imagenes.forEach((imagen) => imagen.classList.remove('mostrada'));
         this.imagenes[this.seleccionada].classList.add('mostrada');
         this.alterarAparienciaBotones();
