@@ -41,8 +41,8 @@ class Formulario {
 
 
 class ValidacionFormulario{
-    constructor(formulario) {
-        this.formulario = new Formulario(formulario)
+    constructor(idFormulario) {
+        this.formulario = new Formulario(idFormulario)
     }
 
     inicializar() {
@@ -109,8 +109,8 @@ class ValidacionFormulario{
 }
 
 class ValidacionFormularioContacto extends ValidacionFormulario{
-    constructor(formulario) {
-        super(formulario);
+    constructor(idFormulario) {
+        super(idFormulario);
     }
 
     controlarErrores(event){
@@ -131,8 +131,8 @@ class ValidacionFormularioContacto extends ValidacionFormulario{
 }
 
 class ValidacionFormularioPopup extends ValidacionFormulario{
-    constructor(formulario) {
-        super(formulario);
+    constructor(idFormulario) {
+        super(idFormulario);
     }
 
     controlarErrores(event) {
