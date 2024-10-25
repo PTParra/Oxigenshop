@@ -8,7 +8,6 @@ const inputSeleccionarPrecio = document.getElementById('selector-precio');
 
 inputSeleccionarPrecio.addEventListener('input', () => {
     const nuevaMoneda = inputSeleccionarPrecio.value;
-    console.log(nuevaMoneda);
     precios.forEach(precio => {
         precio.cambiarNuevoPrecio(nuevaMoneda);
     });

@@ -21,7 +21,6 @@ class Formulario {
 
     async valuesToServer(data) {
         let url = 'https://jsonplaceholder.typicode.com/posts';
-        console.log(data);
         try {
             const response = await fetch(url, {
                 method: 'POST',

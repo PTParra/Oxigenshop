@@ -4,7 +4,6 @@ class PopupFormulario{
         this.invisibleButton = document.getElementById(idInvisibleButton);
         this.tiempoEspera = tiempoEspera;
         this.quitado = localStorage.getItem("popup") === "quitado" ? true : false;
-        console.log(this.quitado);
     }
 
     inicializar(){
