@@ -89,10 +89,10 @@ class ValidacionFormulario{
     }
 
     errorCheckbox(idCampoCheckbox) {
-        const campoEmail = this.formulario.formulario.querySelector('#' + idCampoCheckbox);
-        let valorEmail = campoEmail.checked;
+        const campoCheckbox = this.formulario.formulario.querySelector('#' + idCampoCheckbox);
+        let valorCheckbox = campoCheckbox.checked;
 
-        if (!valorEmail) {
+        if (!valorCheckbox) {
             this.mostrarError("error-" + idCampoCheckbox, "Debes aceptar los terminos y condiciones", "#custom-checkbox-" + idCampoCheckbox);
             return true;
         }
