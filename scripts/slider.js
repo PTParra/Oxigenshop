@@ -36,7 +36,7 @@ class Slider{
             nuevoBoton.id = "botonImagen" + (this.imagenes.indexOf(imagen) + 1);
             nuevoBoton.classList.add('slider__jump-to-image-buttons__button');
             nuevoBoton.addEventListener('click', () => {
-                this.cambiarAIndice(imagen, nuevoBoton);
+                this.cambiarAIndice(imagen);
             } )
             const contenedorBotones = this.slider.querySelector('.slider__jump-to-image-buttons');
 
@@ -51,8 +51,8 @@ class Slider{
     }
 
     alterarAparienciaBotones(){
-        const botones = this.slider.querySelectorAll('.slider__jump-to-image-buttons__button')
-        botones.forEach((boton) => boton.classList.remove('slider__jump-to-image-buttons__button--active'))
+        const botones = this.slider.querySelectorAll('.slider__jump-to-image-buttons__button');
+        botones.forEach((boton) => boton.classList.remove('slider__jump-to-image-buttons__button--active'));
         const botonSeleccionado = document.getElementById('botonImagen' + (this.seleccionada + 1));
         botonSeleccionado.classList.add('slider__jump-to-image-buttons__button--active');
     }
