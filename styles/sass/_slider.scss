@@ -1,0 +1,70 @@
+$colorGris: #C4C4C4;
+$colorFondoBoton: #00000096;
+
+.slider{
+    position: relative;
+    background-color: black;
+    padding: 3em 0;
+    margin: 4em auto;
+    width: 100%;
+
+    &__image{
+        display: none;
+        width: 100%;
+    }
+
+    &__change-button{
+        font-size: 1.5rem;
+        color: $colorGris;
+        background-color: $colorFondoBoton;
+        border: 3px solid $colorGris;
+        border-radius: 9999px;
+        padding: .4rem 1rem;
+        position: absolute;
+        top: 42%;
+        cursor: pointer;
+        &--right{
+            right: 2%;
+        }
+
+        &--left{
+            left: 2%;
+        }
+    }
+    &__jump-to-image-buttons{
+        width: 100%;
+        position: absolute;
+        bottom: 2.5%;
+        text-align: center;
+
+        &__button{
+            display: inline-block;
+            margin-right: .6rem;
+            padding: .15rem;
+            border-radius: 9999px;
+            background-color: $colorGris;
+            border-color: transparent;
+            cursor: pointer;
+
+            &--active{
+                background-color: white;
+            }
+        }
+    }
+}
+
+.mostrada{
+    display: block;
+}
+
+@media only screen and (min-width: 1000px){
+    .slider{
+        width: 60%;
+        padding: 4em 0;
+        &__change-button{
+            font-size: 2rem;
+            padding: .2rem 1rem;
+            top: 47%;
+        }
+    }
+}
