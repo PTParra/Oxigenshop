@@ -1,25 +1,36 @@
 class Slider{
-    constructor(idSlider){
+    constructor(idSlider, tiempoCambioAutomatico){
         this.slider = document.getElementById(idSlider);
         this.imagenes = Array.from(this.slider.querySelectorAll('img'));
         this.seleccionada = 0;
+        this.tiempoCambioAutomatico = tiempoCambioAutomatico
+        this.automatico = setInterval(() => this.cambiarSiguienteOAnterior(1), this.tiempoCambioAutomatico);
     }
 
     inicializar(){
         this.slider.querySelector('#button-left').addEventListener('click', () => {
-            this.seleccionada--;
-            if(this.seleccionada < 0)
-                this.seleccionada = this.imagenes.length - 1;
-            this.cambiarImagen();
+            clearInterval(this.automatico);
+            this.cambiarSiguienteOAnterior(-1);
+            this.automatico = setInterval(() => this.cambiarSiguienteOAnterior(1), this.tiempoCambioAutomatico);
         })
 
         this.slider.querySelector('#button-right').addEventListener('click', () => {
-            this.seleccionada++;
-            if(this.seleccionada > this.imagenes.length - 1)
-                this.seleccionada = 0;
-            this.cambiarImagen();
-        })
+            clearInterval(this.automatico);
+            this.cambiarSiguienteOAnterior(1)
+            this.automatico = setInterval(() => this.cambiarSiguienteOAnterior(1), this.tiempoCambioAutomatico);
+        });
+
         this.crearBotonesSaltarImagen();
+    }
+
+    cambiarSiguienteOAnterior(numero){
+        this.seleccionada += numero;
+
+        if(this.seleccionada > this.imagenes.length - 1)
+            this.seleccionada = 0;
+        if(this.seleccionada < 0)
+            this.seleccionada = this.imagenes.length - 1;
+        this.cambiarImagen();
     }
 
     cambiarImagen(){

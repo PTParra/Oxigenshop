@@ -22,6 +22,6 @@ const popupFormulario = new PopupFormulario('popup-subscribe', 'background-close
 
 popupFormulario.inicializar();
 
-const slider = new Slider('slider-imagenes');
+const slider = new Slider('slider-imagenes', 4000);
 
 slider.inicializar();
