@@ -543,19 +543,17 @@ p, a, label, button {
   color: #55DFB4;
 }
 .pricing__price-selector {
-  width: 80%;
-  margin: 0 auto;
+  width: 100%;
   margin-bottom: 3em;
-  text-align: right;
+  text-align: center;
 }
 .pricing__price-selector__options {
-  border: 1.5px solid #afafaf;
-  background-color: #08A6E4;
-  color: #ececec;
-  text-transform: uppercase;
+  border: 1.5px solid #08A6E4;
+  background-color: white;
+  text-transform: capitalize;
   font-weight: 600;
-  font-size: 1.1rem;
-  padding: 0.4rem 0;
+  font-size: 1.4rem;
+  padding: 0.6rem 0;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -609,9 +607,6 @@ p, a, label, button {
   }
   .pricing__prices .price--premium:hover {
     box-shadow: 5px 10px 27px rgba(85, 223, 180, 0.2901960784);
-  }
-  .pricing__price-selector {
-    width: 82.5%;
   }
 }
 .contact {

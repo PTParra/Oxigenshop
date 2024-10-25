@@ -12,7 +12,7 @@ class Formulario {
 
         if(resultado){
             console.log(resultado);
-            console.log("DATOS ENVIADOS!");
+            alert("¡Informacion enviada correctamente!");
 
             
             this.formulario.submit();
@@ -66,12 +66,24 @@ class ValidacionFormulario{
 
     errorNombre(idCampoNombre) {
         const campoNombre = this.formulario.formulario.querySelector('#' + idCampoNombre);
+        const validarNombre = /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s]+$/;
         let valorNombre = campoNombre.value;
 
         if (valorNombre.length < 2 || valorNombre.length > 100) {
             this.mostrarError("error-" + idCampoNombre, "Debe ser entre 2 y 100 caracteres", "#" + idCampoNombre);
             return true;
         }
+        
+        if (valorNombre.trim().length === 0) {
+            this.mostrarError("error-" + idCampoNombre, "No puede consistir solo en espacios", "#" + idCampoNombre);
+            return true;
+        }
+        
+        if (!validarNombre.test(valorNombre)) {
+            this.mostrarError("error-" + idCampoNombre, "No puede contener números", "#" + idCampoNombre);
+            return true;
+        }
+
         return false;
     }
 
